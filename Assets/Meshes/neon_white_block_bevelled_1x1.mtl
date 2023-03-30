@@ -1,0 +1,8 @@
+newmtl White
+Kd 0.9150943 0.9150943 0.9150943
+d 1
+
+newmtl EmissiveBlue
+Kd 0 0.8318439 1
+d 1
+
