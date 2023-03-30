@@ -11,8 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
 
+    private float dashJumpSpeed = 2.0f;
+
     private bool isJumping = false;
     private bool isJumpPressed = false;
+    private bool isLeaping = false;
     private float gravityWhileJumping;
     private float initialJumpVelocityY;
     
@@ -38,7 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveAmount = context.ReadValue<Vector2>();
+        if (isLeaping == false)
+        {
+            moveAmount = context.ReadValue<Vector2>();
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -49,6 +55,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Jumping!");
             isJumpPressed = true;
+            bool isRunning = moveAmount.magnitude > 0.8f;
+            if (isRunning)
+            {
+                moveAmount *= dashJumpSpeed;
+                isLeaping = true;
+            }
         }
         else if (context.canceled)
         {
@@ -82,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         else if (!isJumpPressed && characterController.isGrounded && isJumping)
         {
             isJumping = false;
+            isLeaping = false;
         }
     }
 
