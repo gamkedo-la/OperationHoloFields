@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
 
-    private float dashJumpSpeed = 2.0f;
+    private float dashJumpSpeed = 1.5f;
 
     private bool isJumping = false;
     private bool isJumpPressed = false;
@@ -41,10 +41,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (isLeaping == false)
+        float airControlPerc = 1.0f;
+        if (isLeaping)
         {
-            moveAmount = context.ReadValue<Vector2>();
+            airControlPerc = 0.0f;
         }
+        else if (isJumping)
+        {
+            airControlPerc = 0.7f;
+        }
+
+        moveAmount = airControlPerc * context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
