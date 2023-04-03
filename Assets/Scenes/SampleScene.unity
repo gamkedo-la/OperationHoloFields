@@ -1222,9 +1222,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &329355622 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4630484399482755887, guid: 8769ac2d3b212114f849eea2a39c1fb0, type: 3}
+--- !u!143 &329355620 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 4630484399482755884, guid: 8769ac2d3b212114f849eea2a39c1fb0, type: 3}
   m_PrefabInstance: {fileID: 4630484399732510347}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &418294472
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f97c35375472043bbf4949b84bd1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 329355622}
+  player: {fileID: 329355620}
   respawn_point: {fileID: 1339003709}
 --- !u!54 &429894779
 Rigidbody:
@@ -1335,7 +1335,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429894777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
