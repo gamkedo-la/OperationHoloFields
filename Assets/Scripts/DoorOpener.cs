@@ -19,26 +19,27 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
     public void OpenDoor()
     {
+        Debug.Log("Hey Ho");
         playableDirector.Play();
         hasBeenActivated = true;
     }
 
-    private void OnTriggerEnter(Collider other) 
-    {
-        if (!other.CompareTag("Player")) return;
-        if (hasBeenActivated) return;
+    // private void OnTriggerEnter(Collider other) 
+    // {
+    //     if (!other.CompareTag("Player")) return;
+    //     if (hasBeenActivated) return;
 
-        PlayerInteract playerInteract = other.GetComponent<PlayerInteract>();
-        playerInteract.SetInteractibleObject(gameObject);
-    }
+    //     PlayerInteract playerInteract = other.GetComponent<PlayerInteract>();
+    //     playerInteract.SetInteractibleObject(gameObject);
+    // }
 
-    private void OnTriggerExit(Collider other) 
-    {
+    // private void OnTriggerExit(Collider other) 
+    // {
         
-        if (!other.CompareTag("Player")) return;
-        if (hasBeenActivated) return;
+    //     if (!other.CompareTag("Player")) return;
+    //     if (hasBeenActivated) return;
 
-        PlayerInteract playerInteract = other.GetComponent<PlayerInteract>();
-        playerInteract.UnsetInteractibleObject();
-    }
+    //     PlayerInteract playerInteract = other.GetComponent<PlayerInteract>();
+    //     playerInteract.UnsetInteractibleObject();
+    // }
 }
