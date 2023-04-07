@@ -86,3 +86,58 @@ Due to last year's incident, 'Bring Your Child to Work Day' has been discontinue
 To compensate, there is free pizza in the breakroom. 
 Continue to make great things.
 Management"
+Savanah/Claire	IM thread	"Savannah: did you hear another 3 people went to the hospital yesterday? 
+Claire: omg, y? the same stuff?
+Savannah: yeah, they were all for 'mental fatigue' whatever that means
+Claire: something sound suspicious in division c. 
+Savannah: what is that, 13 this month? why has no one said anything?
+Claire: you never know who is listening
+-- Conversation Terminated by Management --"
+Gabor Institute	Official Letter to Employees	"Memo: All Employees,
+Due to recent mis-use of the company's instant messaging software - specifically discussing items outside of employee's scope of work - 
+the software has been removed from all computers.
+Any and all official correspondance will be occurring through memos or internal mail.
+Continue to make great things.
+Management"
+Savannah/Charlie	IM thread	"Savannah: i think im next.
+Charlie: why do you think that?
+Savannah: they had me do a physical and concluded I was of 'stable mind and body', charlie, i dont want to do it.
+Charlie: you could leave? they aren't forcing you to work here.
+Savannah: thats just it - they kinda are. like - i can't afford to leave here with daycare and my mortgage. 
+Savannah: i have to get out of here. 
+Charlie: dont do anything rash. 
+-- Conversation Terminated by Management --"
+Gabor Institute	Letter of Qualification	"Congratulations,
+You have been selected to participate in Operation Holofield Division C. As a result - your insurance premiums have tripled and will be taken out of your next paycheck. 
+Please report to Sector 7 to begin training. You do not need to bring anything, we have it all on file.
+Let us continue to make great things. 
+Management"
+Lab Tech 	Post Test Results	"Patient 97 is exhibiting signs of delusion. They are reaching for items that do not exist even after the reality filter has been re-activated.
+Hypothesis: Patients with the capability to see both realms next fully leave either realm. 
+
+Patient 110 is exhibiting severe signs of distress. They are screaming and shaking violently in the corner of the room saying - ""Make it stop"". Unresponsive to interuption.
+Hypothesis: Patient was stretched too far in the second realm and have been unable to re-attach themselves to reality. 
+
+Patient 115 and 116 appear to be colluding and working together. This is tremendous progress. They appear to be harnessing the powers to complete the given puzzles. 
+Unfortunately: During one drop, their reality was incorrect and they plummeted into the pit. We should really look into removing such dangerous items from the test chambers. "
+Dr Barot	Psycology Report	"Management, 
+It is my humble opinion that these tests need to cease immediately. Those of sound body and mind are exhibiting signs of major disillusiment and violent rejections of the world. 
+I do not understand why you continue to have me work with these patients as you continue to manipulate their brains for the sake of 'psuedo-science'. 
+These are people you are destroying - people with dreams and families. You must stop these tests.
+Dr Barot"
+Subpoena	Clerk of Court	"Gabor Insitute,
+It has been brought to our attention that there is unauthorized human testing occurring in your facilities. That is a direct violation of Section 112 Article 22.
+The police are on their way to apprehend those who orchestrated the testing.
+Clerk of Court - Angela Rutherford"
+Lab Tech 	Post Test Results	"9:42am Patient 40 is demonstrating signs of harnessing their new capabilities. They are able to see doors, buttons, and switches to complete puzzles. 
+10:18am Patient 40's condition has rapidly deteriorated. They are stating everytime they blink the reality is changing. 
+10:40am Patient 40 is uncooperative.They have resigned themselves to the corner, refusing to move, refusing to open their eyes stating - ""I want to go home"". 
+11:08am Patient 40 has been removed from the facility and transported to a local hospital. 
+Results: Failure, but notable progress"
+HR	Bring your Family to Work	"Hi Gabor family!
+This weekend is 'Bring your Family to Work' day! 
+-Those who volunteer to bring food will be awarded 2 hours of unpaid personal time.
+-Those who volunteer to participate in Operation Holofield will be given 1 day of paid personal time for each family member.
+-Those who volunteer to give a tour of a facility will be given 1 hour of unpaid personal time.
+We look forward to seeing you there! 
+HR"
