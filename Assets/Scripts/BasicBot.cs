@@ -15,29 +15,32 @@ public class BasicBot : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if(rotating){
+        if (rotating)
+        {
             return;
         }
         rotating = true;
     }
 
-    private void Update() {
-        if(!rotating){
+    private void Update()
+    {
+        if (!rotating)
+        {
             return;
         }
 
         float spinSpeed = 360f * Time.deltaTime;
         currentSpinAmount += spinSpeed;
         transform.eulerAngles += new Vector3(0, spinSpeed, 0);
-        
+
         if (currentSpinAmount > 360f)
-            {
-                currentSpinAmount = 0f;
-                rotating = false;
-                return;
-            }
+        {
+            currentSpinAmount = 0f;
+            rotating = false;
+            return;
+        }
 
     }
 
-    
+
 }
