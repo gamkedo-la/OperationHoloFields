@@ -1336,6 +1336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307792600}
   - component: {fileID: 307792599}
+  - component: {fileID: 307792601}
   m_Layer: 0
   m_Name: HoloGame
   m_TagString: Untagged
@@ -1454,6 +1455,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307792601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307792598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0206b62e497604f8adde57df722482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309151717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &418294472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1001 &662280978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3181,7 +3192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &930752566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7229870568813253192, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
@@ -3842,7 +3852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1001 &1186998492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4184,7 +4193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &1339003708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,7 +4441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1 &1532081847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4713,21 +4720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9caf2e08c2af54aa7fd49400beb67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.83
-  currentWaypoint: {fileID: 0}
-  waypoints:
-  - {fileID: 877404343}
-  - {fileID: 364741746}
-  - {fileID: 1500970579}
-  - {fileID: 2138679919}
-  - {fileID: 593516038}
-  - {fileID: 1299201787}
-  - {fileID: 1174174371}
-  currentWaypointIndex: 0
-  pauseTime: 2
-  timeWaited: 0
-  nextWaypoint: 0
-  lookAheadWaypoint: 0
 --- !u!4 &1629269931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
@@ -6374,7 +6366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.2
 --- !u!1001 &1249735713388920008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6486,6 +6477,46 @@ PrefabInstance:
     - target: {fileID: 2571092815331709451, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
       propertyPath: m_Name
       value: InAllScenes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: 9cbbdfc7-dba7-4fd4-9b1c-6f87d3b8d32d
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: Player/Mute[/Keyboard/m]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 307792601}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMusicMute
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MuteMusic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
