@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 public class DoorOpener : MonoBehaviour, IInteractable
 {
     [SerializeField] PlayableDirector playableDirector;
+    [SerializeField] AudioSource openSound;
     private bool hasBeenActivated = false;
 
     public string GetInteractText()
@@ -21,6 +22,8 @@ public class DoorOpener : MonoBehaviour, IInteractable
     {
         Debug.Log("Hey Ho");
         playableDirector.Play();
+        openSound.pitch = Random.Range(0.75f, 1.25f);
+        openSound.Play();
         hasBeenActivated = true;
     }
 
