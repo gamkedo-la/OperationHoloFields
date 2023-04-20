@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 1.0f;
     [SerializeField] float maxJumpHeight = 3f;
     [SerializeField] float maxJumpTime = 3f;
+    [SerializeField] GameObject movementSoundHandler;
+    [SerializeField] float SecsBetweenMoveSounds = 0.5f;
 
     private Vector2 moveAmount;
     private CharacterController characterController;
@@ -18,10 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isLeaping = false;
     private float gravityWhileJumping;
     private float initialJumpVelocityY;
-    
+
+    private MovementSoundController movementSounds;
+    private float moveSoundCooldownTimer = 0f;
+
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         SetJumpParameters();
+        movementSounds = movementSoundHandler.GetComponent<MovementSoundController>();
     }
 
     private void SetJumpParameters()
@@ -112,5 +118,28 @@ public class PlayerMovement : MonoBehaviour
         playerVelocity.x = movementSpeed.x;
         playerVelocity.z = movementSpeed.z;
         characterController.Move(playerVelocity  * Time.deltaTime);
+        MovementSound();
+    }
+
+    private void MovementSound()
+    {
+        /*
+         * Checks if a movement sound should be played.
+         * If one should, it triggers the movement sound handler game object to play a sound.
+         */
+
+        if (characterController.isGrounded && characterController.velocity != Vector3.zero)
+        {
+            if (moveSoundCooldownTimer <= 0)
+            {
+                // This is hard coded to play ONE type of walking sound.
+                // This should be updated as the types of noises and surfaces are added.
+                // Uses enums that are globally defined in the MovementSoundController.cs script
+                movementSounds.PlayMoveSound(MaterialsurfaceType.Hard, MovementType.Walking);
+                moveSoundCooldownTimer = SecsBetweenMoveSounds;
+            }
+        }
+
+        moveSoundCooldownTimer -= Time.deltaTime;
     }
 }
