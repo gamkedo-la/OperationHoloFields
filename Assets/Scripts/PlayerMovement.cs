@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping = false;
     private bool isJumpPressed = false;
     private bool isLeaping = false;
+    private bool wasFalling = false;
     private float gravityWhileJumping;
     private float initialJumpVelocityY;
 
@@ -86,11 +87,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
+            if (wasFalling)
+            {
+                movementSounds.PlayMoveSound(MaterialSurfaceType.Hard, MovementType.Landing);
+            }
             playerVelocity.y = -0.05f;
+            wasFalling = false;
         }
         else
         {
             playerVelocity.y += gravityWhileJumping * Time.deltaTime;
+            wasFalling = true;
         }
     }
 
@@ -135,11 +142,12 @@ public class PlayerMovement : MonoBehaviour
                 // This is hard coded to play ONE type of walking sound.
                 // This should be updated as the types of noises and surfaces are added.
                 // Uses enums that are globally defined in the MovementSoundController.cs script
-                movementSounds.PlayMoveSound(MaterialsurfaceType.Hard, MovementType.Walking);
+                movementSounds.PlayMoveSound(MaterialSurfaceType.Hard, MovementType.Walking);
                 moveSoundCooldownTimer = SecsBetweenMoveSounds;
             }
         }
 
         moveSoundCooldownTimer -= Time.deltaTime;
     }
+
 }

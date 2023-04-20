@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum MovementType { Landing, Running, Swimming, Walking }
-public enum MaterialsurfaceType { Dirt, Hard, MetalGrate }
+public enum MaterialSurfaceType { Dirt, Hard, MetalGrate }
 
 public class MovementSoundController : MonoBehaviour
 {
     [SerializeField] GameObject hardFootSounds;
 
-    private AudioSource[] walkHardFootSoundsFootSounds;
+    private AudioSource[] walkHardFootSounds;
+    private AudioSource[] landHardFootSounds;
 
     private AudioSource soundToPlay;
 
     void Awake()
     {
-        walkHardFootSoundsFootSounds = hardFootSounds.transform.Find("WalkingSounds").GetComponents<AudioSource>();
+        walkHardFootSounds = hardFootSounds.transform.Find("WalkingSounds").GetComponents<AudioSource>();
+        landHardFootSounds = hardFootSounds.transform.Find("LandingSounds").GetComponents<AudioSource>();
     }
 
-    public void PlayMoveSound(MaterialsurfaceType surfaceType, MovementType footStep)
+    public void PlayMoveSound(MaterialSurfaceType surfaceType, MovementType moveType)
     {
-        if(surfaceType == MaterialsurfaceType.Hard) {
-            if(footStep == MovementType.Walking) { soundToPlay = walkHardFootSoundsFootSounds[Random.Range(0, walkHardFootSoundsFootSounds.Length - 1)]; }
+        if(surfaceType == MaterialSurfaceType.Hard) {
+            if(moveType == MovementType.Walking) { soundToPlay = walkHardFootSounds[Random.Range(0, walkHardFootSounds.Length - 1)]; }
+            else if(moveType == MovementType.Landing) { soundToPlay = landHardFootSounds[Random.Range(0, landHardFootSounds.Length - 1)]; }
         }
-        else { soundToPlay = walkHardFootSoundsFootSounds[Random.Range(0, walkHardFootSoundsFootSounds.Length - 1)]; }
 
         soundToPlay.pitch = Random.Range(0.75f, 1.5f);
         soundToPlay.Play();
