@@ -7,8 +7,8 @@ public class RespawnScript : MonoBehaviour
     //public GameObject player;
     //public GameObject respawnPoint;
 
-    [SerializeField] private CharacterController player;
-    [SerializeField] private Transform respawnPoint;
+    [SerializeField] public CharacterController player;
+    [SerializeField] public GameObject respawnPoint;
 
     // Start is called before the first frame update
     void Start()
