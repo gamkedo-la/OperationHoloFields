@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnScript : MonoBehaviour
@@ -9,6 +7,13 @@ public class RespawnScript : MonoBehaviour
 
     [SerializeField] public CharacterController player;
     [SerializeField] public GameObject respawnPoint;
+
+    private void Awake() {
+        if (player == null)
+        {
+            player = FindObjectOfType<CharacterController>();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
