@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5588601307544576573}
   - component: {fileID: 5008225797641600033}
+  - component: {fileID: 1199706727}
   m_Layer: 0
   m_Name: SinglePressButton
   m_TagString: Untagged
@@ -46,6 +47,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1199706727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100824746786088052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd38d388628c154da3f33d4440c5902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObjects:
+  - {fileID: 0}
+  inactiveMaterial: {fileID: 2100000, guid: da35a99afc742044ebf9f74918c633dc, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 43741043ede746645902e60a5b38f4a9, type: 2}
 --- !u!1001 &3110552784248461128
 PrefabInstance:
   m_ObjectHideFlags: 0
