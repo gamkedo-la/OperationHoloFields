@@ -115,6 +115,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = false;
             isLeaping = false;
+            bool isRunning = moveAmount.magnitude > 0.8f;
+            if (isRunning)
+            {
+                moveAmount /= dashJumpSpeed;
+            }
         }
     }
 
