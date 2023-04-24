@@ -25,10 +25,16 @@ public class PlayerMovement : MonoBehaviour
     private MovementSoundController movementSounds;
     private float moveSoundCooldownTimer = 0f;
 
+    [SerializeField] GameObject pauseMenu;
+    public bool gameIsPaused = false;
+
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         SetJumpParameters();
         movementSounds = movementSoundHandler.GetComponent<MovementSoundController>();
+
+        //playerInputComponent = gameObject.GetComponent<PlayerInput>();
+        //pauseMenuInputAction = playerInputComponent.TogglePause
     }
 
     private void SetJumpParameters()
@@ -153,6 +159,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
         moveSoundCooldownTimer -= Time.deltaTime;
+    }
+
+    public void TogglePause()
+    {
+        Debug.Log("p key recognized");
+        if (!gameIsPaused)
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+            gameIsPaused = true;
+        }
+        else if (gameIsPaused)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+            gameIsPaused = false;
+        }
     }
 
 }
