@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            if (wasFalling)
+            if (wasFalling && playerVelocity.y < -5)
             {
                 movementSounds.PlayMoveSound(MaterialSurfaceType.Hard, MovementType.Landing);
             }
