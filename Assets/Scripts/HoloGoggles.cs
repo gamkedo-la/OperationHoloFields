@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class HoloGoggles : MonoBehaviour
 {
+
+    public static event EventHandler<bool> OnHoloGogglesTriggered;
+
     private bool areActive = false;
 
     GameObject[] allHoloObjects;
@@ -16,25 +20,27 @@ public class HoloGoggles : MonoBehaviour
     private void Start() {
         allHoloObjects = GameObject.FindGameObjectsWithTag("Holo");
         SetHoloObjectsActive(false);
-        scanlineImageAnimatorComponent = scanlineRawImage.GetComponent<Animator>();
-        scanlineAudioEffectsPlayer = GetComponent<AudioSource>();
+        //scanlineImageAnimatorComponent = scanlineRawImage.GetComponent<Animator>();
+        //scanlineAudioEffectsPlayer = GetComponent<AudioSource>();
     }
 
     public void OnToggle(InputAction.CallbackContext context)
     {
         Debug.Log("areActive: " + areActive);
+        
         if (!areActive && context.performed)
         {
             SetHoloObjectsActive(true);
-            scanlineAudioEffectsPlayer.clip = scanlineOnSoundEffect;
-            scanlineAudioEffectsPlayer.Play();
-            scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
+            //scanlineAudioEffectsPlayer.clip = scanlineOnSoundEffect;
+            //scanlineAudioEffectsPlayer.Play();
+            //scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
         }
         else if (areActive && context.performed)
         {
-            //SetHoloObjectsActive(false);
-            scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
+            SetHoloObjectsActive(false);
+            //scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
         }
+        
     }
 
     private void SetHoloObjectsActive(bool active)
@@ -44,6 +50,7 @@ public class HoloGoggles : MonoBehaviour
             holoObject.SetActive(active);
         }
         areActive = active;
+        OnHoloGogglesTriggered?.Invoke(this, areActive);
     }
 
     public void SetHoloObjectsActiveFalse()
