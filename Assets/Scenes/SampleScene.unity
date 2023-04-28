@@ -7779,7 +7779,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2711936565083911175, guid: bc12b4b450afaef44b012033efea161f, type: 3}
   m_PrefabInstance: {fileID: 1249735713388920008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1598468615
+--- !u!114 &1598468619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7788,9 +7788,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1598468611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9caf2e08c2af54aa7fd49400beb67e, type: 3}
+  m_Script: {fileID: 11500000, guid: f47d3ed90ee85f9499c55c5079f548e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holoScaleAmount: 1.1
 --- !u!4 &1629269931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
@@ -10090,6 +10091,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2409095758590527813, guid: bc12b4b450afaef44b012033efea161f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409095758590527813, guid: bc12b4b450afaef44b012033efea161f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.92
       objectReference: {fileID: 0}
@@ -10190,6 +10195,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InAllScenes
       objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254003, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: scanlineRawImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254003, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: scanlineOnSoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: b4d02e3e3a16c3e4194e4bca10c6d600, type: 3}
     - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 17
