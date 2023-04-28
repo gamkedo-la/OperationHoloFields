@@ -1582,6 +1582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scanlineRawImage: {fileID: 205784499699635069}
   scanlineOnSoundEffect: {fileID: 8300000, guid: b4d02e3e3a16c3e4194e4bca10c6d600, type: 3}
+  scanlineOffSoundEffect: {fileID: 8300000, guid: c36e11e7e858ac2429cdd6dc38c34e74, type: 3}
 --- !u!114 &2848446899781894545
 MonoBehaviour:
   m_ObjectHideFlags: 0
