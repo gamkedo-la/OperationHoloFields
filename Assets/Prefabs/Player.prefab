@@ -44,8 +44,10 @@ GameObject:
   - component: {fileID: 8921137657229549068}
   - component: {fileID: 124199502088269499}
   - component: {fileID: 720317496802610367}
+  - component: {fileID: 4274894045013448453}
+  - component: {fileID: 3864300562363727830}
   m_Layer: 0
-  m_Name: RawImage
+  m_Name: ScanlineRawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -106,6 +108,39 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &4274894045013448453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205784499699635069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ccc7f9394dea14cb6ebbf9caa422ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &3864300562363727830
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205784499699635069}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19821f4f5a8b0cd4eb9e84072472a48c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &428923285528322635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bdd0daabb5ec04387cf687a306477f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scanlineRawImage: {fileID: 205784499699635069}
+  scanlineOnSoundEffect: {fileID: 8300000, guid: b4d02e3e3a16c3e4194e4bca10c6d600, type: 3}
 --- !u!114 &2848446899781894545
 MonoBehaviour:
   m_ObjectHideFlags: 0

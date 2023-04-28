@@ -20,8 +20,8 @@ public class HoloGoggles : MonoBehaviour
     private void Start() {
         allHoloObjects = GameObject.FindGameObjectsWithTag("Holo");
         SetHoloObjectsActive(false);
-        //scanlineImageAnimatorComponent = scanlineRawImage.GetComponent<Animator>();
-        //scanlineAudioEffectsPlayer = GetComponent<AudioSource>();
+        scanlineImageAnimatorComponent = scanlineRawImage.GetComponent<Animator>();
+        scanlineAudioEffectsPlayer = GetComponent<AudioSource>();
     }
 
     public void OnToggle(InputAction.CallbackContext context)
@@ -31,14 +31,14 @@ public class HoloGoggles : MonoBehaviour
         if (!areActive && context.performed)
         {
             SetHoloObjectsActive(true);
-            //scanlineAudioEffectsPlayer.clip = scanlineOnSoundEffect;
-            //scanlineAudioEffectsPlayer.Play();
-            //scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
+            scanlineAudioEffectsPlayer.clip = scanlineOnSoundEffect;
+            scanlineAudioEffectsPlayer.Play();
+            scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
         }
         else if (areActive && context.performed)
         {
             SetHoloObjectsActive(false);
-            //scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
+            scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
         }
         
     }
