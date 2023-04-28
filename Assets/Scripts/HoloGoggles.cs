@@ -7,20 +7,27 @@ public class HoloGoggles : MonoBehaviour
 
     GameObject[] allHoloObjects;
 
+    [SerializeField] GameObject scanlineRawImage;
+    private Animator scanlineImageAnimatorComponent;
+
     private void Start() {
         allHoloObjects = GameObject.FindGameObjectsWithTag("Holo");
         SetHoloObjectsActive(false);
+        scanlineImageAnimatorComponent = scanlineRawImage.GetComponent<Animator>();
     }
 
     public void OnToggle(InputAction.CallbackContext context)
     {
-        if (!areActive)
+        Debug.Log("areActive: " + areActive);
+        if (!areActive && context.performed)
         {
             SetHoloObjectsActive(true);
+            scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
         }
-        else
+        else if (areActive && context.performed)
         {
-            SetHoloObjectsActive(false);
+            //SetHoloObjectsActive(false);
+            scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
         }
     }
 
@@ -31,5 +38,10 @@ public class HoloGoggles : MonoBehaviour
             holoObject.SetActive(active);
         }
         areActive = active;
+    }
+
+    public void SetHoloObjectsActiveFalse()
+    {
+        SetHoloObjectsActive(false);
     }
 }
