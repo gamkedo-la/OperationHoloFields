@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Holo
   - CheckPoint
+  - Interactable
   layers:
   - Default
   - TransparentFX

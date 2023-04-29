@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: neon_white_ramp_bevelled_1x1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cda6b1e74a3046243b12bc94449aea76, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda6b1e74a3046243b12bc94449aea76, type: 3}
 --- !u!1 &55855850
@@ -860,6 +864,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4e58da83919af464ebecaa87613e961f, type: 3}
       propertyPath: m_Name
       value: neon_white_pillar_1x1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4e58da83919af464ebecaa87613e961f, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e58da83919af464ebecaa87613e961f, type: 3}
@@ -1392,6 +1400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: neon_white_block_bevelled_1x1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9033b389e61fbb49ab8c5216e74fce7, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9033b389e61fbb49ab8c5216e74fce7, type: 3}
 --- !u!1 &223482595
@@ -1822,6 +1834,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &262926245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255464401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &294575116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,6 +3551,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: white_block_bevelled_1x1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229870568813253192, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520327907225299553, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b58d53afe16d43468b4a6d932899eeb, type: 3}
 --- !u!1 &663055926
@@ -4351,6 +4396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: white_block_1x1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 344e2868e5b07a643b1b6667a492c0c9, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 344e2868e5b07a643b1b6667a492c0c9, type: 3}
 --- !u!1 &788950884
@@ -4513,6 +4562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aed3b111479ec6644b2d272c6ff4687e, type: 3}
       propertyPath: m_Name
       value: white_ramp_1x1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aed3b111479ec6644b2d272c6ff4687e, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aed3b111479ec6644b2d272c6ff4687e, type: 3}
@@ -7880,6 +7933,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1590684209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590684206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &1598468611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2711936565083911175, guid: bc12b4b450afaef44b012033efea161f, type: 3}
@@ -8039,6 +8109,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1702311431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702311428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &1726652656
 GameObject:
   m_ObjectHideFlags: 0
@@ -8170,6 +8257,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1751239905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751239902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &1758884217
 GameObject:
   m_ObjectHideFlags: 0
@@ -8544,6 +8648,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1833693173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772377794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &1841456756
 GameObject:
   m_ObjectHideFlags: 0
@@ -8807,6 +8928,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49c221a634d96f0478fd623d36c1e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1860667149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860667146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 2100000, guid: 6ba6f2a4e6a761d4ca3fe5d6fce41bba, type: 2}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!1 &1872105365
 GameObject:
   m_ObjectHideFlags: 0
