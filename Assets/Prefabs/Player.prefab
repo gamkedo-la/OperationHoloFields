@@ -1537,6 +1537,7 @@ MonoBehaviour:
   moveSpeed: 7
   maxJumpHeight: 2
   maxJumpTime: 1
+  jumpGraceSecs: 0.25
   movementSoundHandler: {fileID: 2897521934617333371}
   SecsBetweenMoveSounds: 0.5
   pauseMenu: {fileID: 6958197718084832601}

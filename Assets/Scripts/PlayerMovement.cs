@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 1.0f;
     [SerializeField] float maxJumpHeight = 3f;
     [SerializeField] float maxJumpTime = 3f;
+    [SerializeField] float jumpGraceSecs = 0.25f;
     [SerializeField] GameObject movementSoundHandler;
     [SerializeField] float SecsBetweenMoveSounds = 0.5f;
 
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
 
     private float dashJumpSpeed = 1.5f;
+    private float jumpGraceTimer = 0.0f;
 
     private bool isJumping = false;
     private bool isJumpPressed = false;
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Debug.Log($"Phase {context.phase} - Trigger {context.action.triggered} - Value {context.ReadValueAsButton()}");
 
-        if (characterController.isGrounded && context.performed)
+        if ((characterController.isGrounded || jumpGraceTimer < jumpGraceSecs) && context.performed)
         {
             Debug.Log("Jumping!");
             isJumpPressed = true;
@@ -98,11 +100,13 @@ public class PlayerMovement : MonoBehaviour
                 movementSounds.PlayMoveSound(MaterialSurfaceType.Hard, MovementType.Landing);
             }
             playerVelocity.y = -0.05f;
+            jumpGraceTimer = 0.0f;
             wasFalling = false;
         }
         else
         {
             playerVelocity.y += gravityWhileJumping * Time.deltaTime;
+            jumpGraceTimer += Time.deltaTime;
             wasFalling = true;
         }
     }
@@ -112,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
         // if (characterController.isGrounded && playerVelocity.y <= 0) return;
 
         // Changes the height position of the player
-        if (isJumpPressed && characterController.isGrounded && !isJumping)
+        if (isJumpPressed && (characterController.isGrounded || jumpGraceTimer < jumpGraceSecs) && !isJumping )
         {
             isJumping = true;
             playerVelocity.y = initialJumpVelocityY;
