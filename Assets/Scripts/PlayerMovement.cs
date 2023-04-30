@@ -35,8 +35,7 @@ public class PlayerMovement : MonoBehaviour
         SetJumpParameters();
         movementSounds = movementSoundHandler.GetComponent<MovementSoundController>();
 
-        //playerInputComponent = gameObject.GetComponent<PlayerInput>();
-        //pauseMenuInputAction = playerInputComponent.TogglePause
+        Cursor.visible = false;
     }
 
     private void SetJumpParameters()
@@ -173,12 +172,16 @@ public class PlayerMovement : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
             gameIsPaused = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (gameIsPaused)
         {
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
             gameIsPaused = false;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

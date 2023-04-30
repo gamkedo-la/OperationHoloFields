@@ -25,7 +25,8 @@ public class PlayerLook : MonoBehaviour
     private void Start() 
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        //Cursor.visible = true;
+        Cursor.visible = false;
 
         upDownRotation = 0f;
         arrayOfInteractableObjects = GameObject.FindGameObjectsWithTag("Interactable");
