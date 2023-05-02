@@ -22,4 +22,11 @@ public class CheckPointScript : MonoBehaviour
             checkpointRings.GetComponent<CheckpointColorChange>().checkpointColorOn = true;
         }
     }
+
+    void Update ()
+    {
+        if (respawn.respawnPoint != this.gameObject) {
+            checkpointRings.GetComponent<CheckpointColorChange>().checkpointColorOn = false;
+        }
+    }
 }

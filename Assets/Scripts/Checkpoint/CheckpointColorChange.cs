@@ -25,6 +25,9 @@ public class CheckpointColorChange : MonoBehaviour
      if (checkpointColorOn == true)
         {
             rend.sharedMaterial = material[1];
+        } else
+        {
+            rend.sharedMaterial = material[0];
         }
     }
 }
