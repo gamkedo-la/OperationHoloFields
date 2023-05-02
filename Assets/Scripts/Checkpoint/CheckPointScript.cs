@@ -5,6 +5,8 @@ using UnityEngine;
 public class CheckPointScript : MonoBehaviour
 {
     private RespawnScript respawn;
+    public GameObject checkpointRings;
+    
 
     void Awake()
     {
@@ -17,6 +19,7 @@ public class CheckPointScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             respawn.respawnPoint = this.gameObject;
+            checkpointRings.GetComponent<CheckpointColorChange>().checkpointColorOn = true;
         }
     }
 }
