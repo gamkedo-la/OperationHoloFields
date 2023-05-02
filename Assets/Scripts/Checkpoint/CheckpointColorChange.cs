@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckpointColorChange : MonoBehaviour
 {
-
+    private int ringMat = 0;
     public Material[] material;
     Renderer rend;
 
@@ -15,16 +15,12 @@ public class CheckpointColorChange : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
-        rend.sharedMaterial = material[0];
+        rend.sharedMaterial = material[ringMat];
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (respawn.respawnPoint = gameObject.CheckPoint2)
-       // {
-       //     rend.sharedMaterial = material[1];
-       // }
      
     }
 }
