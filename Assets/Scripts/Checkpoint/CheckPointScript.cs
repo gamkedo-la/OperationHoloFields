@@ -5,8 +5,9 @@ using UnityEngine;
 public class CheckPointScript : MonoBehaviour
 {
     private RespawnScript respawn;
-    public GameObject checkpointRings;
-    
+    public GameObject checkpointRing1;
+    public GameObject checkpointRing2;
+
 
     void Awake()
     {
@@ -19,14 +20,16 @@ public class CheckPointScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             respawn.respawnPoint = this.gameObject;
-            checkpointRings.GetComponent<CheckpointColorChange>().checkpointColorOn = true;
+            checkpointRing1.GetComponent<CheckpointColorChange>().checkpointColorOn = true;
+            checkpointRing2.GetComponent<CheckpointColorChange>().checkpointColorOn = true;
         }
     }
 
     void Update ()
     {
         if (respawn.respawnPoint != this.gameObject) {
-            checkpointRings.GetComponent<CheckpointColorChange>().checkpointColorOn = false;
+            checkpointRing1.GetComponent<CheckpointColorChange>().checkpointColorOn = false;
+            checkpointRing2.GetComponent<CheckpointColorChange>().checkpointColorOn = false;
         }
     }
 }

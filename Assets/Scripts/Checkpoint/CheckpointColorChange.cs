@@ -5,13 +5,11 @@ using UnityEngine;
 public class CheckpointColorChange : MonoBehaviour
 {
     public bool checkpointColorOn = false;
-    //private int ringMat = 0;
     public Material[] material;
     Renderer rend;
 
     private RespawnScript respawn;
 
-    // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -19,7 +17,6 @@ public class CheckpointColorChange : MonoBehaviour
         rend.sharedMaterial = material[0];
     }
 
-    // Update is called once per frame
     void Update()
     {
      if (checkpointColorOn == true)
