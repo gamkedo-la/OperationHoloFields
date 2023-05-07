@@ -4303,6 +4303,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823128016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &831303574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2876549566268074521, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
+  m_PrefabInstance: {fileID: 1667736046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833620042
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,6 +6429,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177733156}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1179502331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
+  m_PrefabInstance: {fileID: 1667736046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1179502334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179502331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: -8074505167046961010, guid: 538e186d14480db4bb19bc01534c0186, type: 3}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 831303574}
+  myGameObject: {fileID: 1179502331}
 --- !u!4 &1198697807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4039260831053171811, guid: 8c46160b6aa1644489301ce7851ffdc9, type: 3}
@@ -8520,9 +8547,17 @@ PrefabInstance:
       propertyPath: linkedObjects.Array.data[0]
       value: 
       objectReference: {fileID: 923991752}
+    - target: {fileID: 2876549566268074521, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_Name
       value: SinglePressButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 5588601307544576573, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_RootOrder
