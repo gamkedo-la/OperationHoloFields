@@ -30,12 +30,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     public bool gameIsPaused = false;
 
+    [SerializeField] GameObject currentLevelStartingSpawnpoint;
+
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         SetJumpParameters();
         movementSounds = movementSoundHandler.GetComponent<MovementSoundController>();
 
         Cursor.visible = false;
+
+        gameObject.transform.position = currentLevelStartingSpawnpoint.transform.position;
     }
 
     private void SetJumpParameters()
