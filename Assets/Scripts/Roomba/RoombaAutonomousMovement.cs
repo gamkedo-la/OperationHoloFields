@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +22,14 @@ namespace AutonomousMovement
 
         [SerializeField]
         public AutonomousMovementWaypoint[] waypoints;
+
+        [SerializeField]
+        public AutonomousMovementWaypoint[][] doorWaypoints = new AutonomousMovementWaypoint[1][];
+
+        [SerializeField]
+        public AutonomousMovementWaypoint[] door1Waypoints;
+        public int doorsOpen = -1;
+
 
         [SerializeField]
         public int currentWaypointIndex;
@@ -79,11 +88,24 @@ namespace AutonomousMovement
             Move();
         }
 
+        public void UpdatePathWithDoor(object sender, bool doorOpen)
+        {
+            doorsOpen++;
+            // Update the waypoints array with the new waypoints
+            // TODO: Need to handle where there are multiple door waypoints to iterate through
+            this.waypoints = new AutonomousMovementWaypoint[this.doorWaypoints[doorsOpen].Length];
+            this.doorWaypoints[doorsOpen].CopyTo(this.waypoints, 0);
+            this.currentWaypoint = this.waypoints[0];
+            currentWaypointIndex = 0;
+        }
+
         public void Start()
         {
             // Set the current waypoint to the first waypoint in the array
-            this.currentWaypoint = this.Waypoints[0];
-            currentWaypointIndex = System.Array.IndexOf(this.Waypoints, this.currentWaypoint);
+            RoombaDoorPress.RoombaDoorTriggered += UpdatePathWithDoor;
+            this.currentWaypoint = this.waypoints[0];
+            currentWaypointIndex = System.Array.IndexOf(this.waypoints, this.currentWaypoint);
+            this.doorWaypoints[0] = this.door1Waypoints;
         }
     }
 }
