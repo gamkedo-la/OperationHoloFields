@@ -31,7 +31,9 @@ public class DialogueRenderer : MonoBehaviour
             case "SampleScene":
                 initialDialogue = "This is a sample scene here you can test the game \n\n Press Q to close";
                 break;
-
+            case "Warehouse":
+                initialDialogue = "If an object highlights when you get close to it, press Enter to interact with it.";
+                break;
             // More dialogues can be added according to which scenes they belong to.
         }
 
