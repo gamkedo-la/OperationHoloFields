@@ -20,7 +20,6 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
     public void OpenDoor()
     {
-        Debug.Log("Hey Ho");
         playableDirector.Play();
         openSound.pitch = Random.Range(0.75f, 1.25f);
         openSound.Play();

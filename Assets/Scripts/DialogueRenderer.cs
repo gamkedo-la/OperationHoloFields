@@ -24,21 +24,18 @@ public class DialogueRenderer : MonoBehaviour
 
         string initialDialogue = "";
 
-        Debug.Log(sceneName);
-
         switch (sceneName)
         {
             case "SampleScene":
                 initialDialogue = "This is a sample scene here you can test the game \n\n Press Q to close";
                 break;
             case "Warehouse":
-                initialDialogue = "If an object highlights when you get close to it, press Enter to interact with it.";
+                initialDialogue = "If an object highlights when you get close to it, press Enter to interact with it. \n\n Press Q to close.";
                 break;
             // More dialogues can be added according to which scenes they belong to.
         }
 
-        SetText(initialDialogue);
-        ShowDialogue();
+        ShowDialogue(initialDialogue);
     }
 
     public void SetText(string newText)
@@ -53,8 +50,13 @@ public class DialogueRenderer : MonoBehaviour
         isDialogueEnabled = false;
     }
 
-    public void ShowDialogue()
+    public void ShowDialogue(string dialogueToShow)
     {
+        if (dialogueToShow != null)
+        {
+            Debug.Log("dialogueToShow: " + dialogueToShow);
+            SetText(dialogueToShow);
+        }
         dialogueBackground.enabled = true;
         transform.GetChild(0).gameObject.SetActive(true);
         isDialogueEnabled = true;

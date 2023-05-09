@@ -30,10 +30,6 @@ public class PlayerLook : MonoBehaviour
 
         upDownRotation = 0f;
         arrayOfInteractableObjects = GameObject.FindGameObjectsWithTag("Interactable");
-        for (int i = 0; i < arrayOfInteractableObjects.Length; i++)
-        {
-            Debug.Log("arrayOfInteractableObjects[i]: " + arrayOfInteractableObjects[i]);
-        }
     }
 
     // Update is called once per frame

@@ -22,9 +22,9 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
         {
-            Debug.Log(hit.transform);
+            //Debug.Log(hit.transform);
             if(hit.transform.TryGetComponent<IInteractable>(out var interactable)){
-                Debug.Log(interactable.GetInteractText());
+                //Debug.Log(interactable.GetInteractText());
                 interactable.Interact();
             }
 
