@@ -54,7 +54,6 @@ public class DialogueRenderer : MonoBehaviour
     {
         if (dialogueToShow != null)
         {
-            Debug.Log("dialogueToShow: " + dialogueToShow);
             SetText(dialogueToShow);
         }
         dialogueBackground.enabled = true;

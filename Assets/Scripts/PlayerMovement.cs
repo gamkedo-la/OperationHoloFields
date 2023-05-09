@@ -78,7 +78,6 @@ public class PlayerMovement : MonoBehaviour
 
         if ((characterController.isGrounded || jumpGraceTimer < jumpGraceSecs) && context.performed)
         {
-            Debug.Log("Jumping!");
             isJumpPressed = true;
             bool isRunning = moveAmount.magnitude > 0.8f;
             if (isRunning)
@@ -89,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (context.canceled)
         {
-            Debug.Log("Landing");
             isJumpPressed = false;
         }
     }

@@ -19,7 +19,6 @@ public class HoloLensDialogueScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger entered");
         if (other.gameObject.name == "Player" && !alreadyTriggered)
         {
             dialogueRendererScript.ShowDialogue("Press TAB to activate and deactivate HoloLens. \n\n Press Q to close.");

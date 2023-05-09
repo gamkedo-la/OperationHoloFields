@@ -26,9 +26,7 @@ public class HoloGoggles : MonoBehaviour
     }
 
     public void OnToggle(InputAction.CallbackContext context)
-    {
-        Debug.Log("areActive: " + areActive);
-        
+    {        
         if (!areActive && context.performed)
         {
             SetHoloObjectsActive(true);
