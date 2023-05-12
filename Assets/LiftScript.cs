@@ -27,7 +27,8 @@ public class LiftScript : MonoBehaviour, IInteractable
     [ContextMenu("LiftTheLift")]
     public void LiftTheLift()
     {
-        if (!isActivated)
+        Debug.Log("inside LiftTheLift");
+        if (!isActivated || myState == "I am animating")
         {
             Debug.Log("the lift isn't activated");
 
@@ -37,16 +38,24 @@ public class LiftScript : MonoBehaviour, IInteractable
         {
             if (myState == "I am down")
             {
-                Debug.Log("inside I am down state check");
                 myAnimator.SetTrigger("AnimateLiftUp");
-                myState = "I am up";
+                myState = "I am animating";
             }
             else if (myState == "I am up")
             {
                 myAnimator.SetTrigger("AnimateLiftDown");
-                myState = "I am down";
+                myState = "I am animating";
             }
-            
         }
+    }
+
+    public void ChangeStateToIAmUp()
+    {
+        myState = "I am up";
+    }
+
+    public void ChangeStateToIAmDown()
+    {
+        myState = "I am down";
     }
 }

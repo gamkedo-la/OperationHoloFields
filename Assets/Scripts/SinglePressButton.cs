@@ -24,7 +24,7 @@ public class SinglePressButton : MonoBehaviour, IInteractable
     public void Interact()
     {
         
-        if(hasBeenActivated || !canBeActivated){
+        if(/*hasBeenActivated ||*/ !canBeActivated){
             return;
         }
 
