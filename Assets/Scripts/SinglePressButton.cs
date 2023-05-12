@@ -6,7 +6,7 @@ public class SinglePressButton : MonoBehaviour, IInteractable
 {
 
     [SerializeField] List<GameObject> linkedObjects;
-    bool hasBeenActivated = false;
+    public bool hasBeenActivated = false;
     public bool canBeActivated = false;
     [SerializeField] Material inactiveMaterial;
     [SerializeField] Material activatedMaterial;
@@ -23,6 +23,7 @@ public class SinglePressButton : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        
         if(hasBeenActivated || !canBeActivated){
             return;
         }
