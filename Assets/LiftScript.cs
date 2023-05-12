@@ -24,6 +24,7 @@ public class LiftScript : MonoBehaviour, IInteractable
         LiftTheLift();
     }
 
+    [ContextMenu("LiftTheLift")]
     public void LiftTheLift()
     {
         if (!isActivated)
