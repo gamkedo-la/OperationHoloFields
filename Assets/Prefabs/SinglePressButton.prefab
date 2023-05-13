@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5588601307544576573}
   - component: {fileID: 5008225797641600033}
   - component: {fileID: 1199706727}
+  - component: {fileID: 2216693568652798168}
   m_Layer: 0
   m_Name: SinglePressButton
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,8 +62,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedObjects:
   - {fileID: 0}
+  hasBeenActivated: 0
+  canBeActivated: 1
   inactiveMaterial: {fileID: 2100000, guid: da35a99afc742044ebf9f74918c633dc, type: 2}
   activatedMaterial: {fileID: 2100000, guid: 43741043ede746645902e60a5b38f4a9, type: 2}
+--- !u!114 &2216693568652798168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100824746786088052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMaterial: {fileID: -8074505167046961010, guid: 538e186d14480db4bb19bc01534c0186, type: 3}
+  interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
+  couldBeOrCurrentlyInteractedByPlayer: 0
+  childObjectWithActualMeshesAndMaterials: {fileID: 2876549566268074521}
+  myGameObject: {fileID: 3100824746786088052}
 --- !u!1001 &3110552784248461128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,6 +156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538e186d14480db4bb19bc01534c0186, type: 3}
+--- !u!1 &2876549566268074521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 538e186d14480db4bb19bc01534c0186, type: 3}
+  m_PrefabInstance: {fileID: 3110552784248461128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3215673744098209955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 538e186d14480db4bb19bc01534c0186, type: 3}
