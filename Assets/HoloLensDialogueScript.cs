@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 
 public class HoloLensDialogueScript : MonoBehaviour
@@ -21,7 +18,7 @@ public class HoloLensDialogueScript : MonoBehaviour
     {
         if (other.gameObject.name == "Player" && !alreadyTriggered)
         {
-            dialogueRendererScript.ShowDialogue("Press TAB to activate and deactivate HoloLens. \n\n Press Q to close.");
+            dialogueRendererScript.ShowDialogue("Press TAB to activate and deactivate Holo Goggles. \n\n Press Q to close.");
             
             alreadyTriggered = true;
         }

@@ -72,7 +72,7 @@ public class PlayerGrab : MonoBehaviour
 
     public void Drop()
     {
-        Debug.Log("Dropping Shit");
+        Debug.Log("Dropping");
         if (grabbedObjectRigidBody != null)
         {
             grabbedObjectRigidBody.velocity = Vector3.zero;
