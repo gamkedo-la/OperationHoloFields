@@ -14,6 +14,18 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
+        if (player != null)
+        {
+            LookAtPlayer();
+        }
+        else
+        {
+            player = GameObject.Find("Player");
+        }
+    }
+
+    private void LookAtPlayer()
+    {
         if (!isBox)
         {
             Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);

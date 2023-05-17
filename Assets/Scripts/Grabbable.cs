@@ -6,10 +6,15 @@ public class Grabbable : MonoBehaviour, IInteractable
 {
 
     PlayerGrab playerGrab;
-    
 
-    private void Awake() {
-        playerGrab = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGrab>();
+
+    private void Awake()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerGrab = player.GetComponent<PlayerGrab>();
+        }
     }
 
     public string GetInteractText()
@@ -19,7 +24,7 @@ public class Grabbable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        
+
         playerGrab.Grab(this);
 
     }
