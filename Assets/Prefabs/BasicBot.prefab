@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2409095758590527813}
   - component: {fileID: 4789578176073312390}
   - component: {fileID: 791310618}
+  - component: {fileID: 5306974685914272095}
   m_Layer: 0
   m_Name: BasicBot
   m_TagString: Untagged
@@ -145,6 +146,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1806fb0b8fa9549a6378c8e9bfd326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5306974685914272095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711936565083911175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf293ba6aaa8284fa569128dc919397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  currentWaypoint: {fileID: 0}
+  waypoints: []
+  door1Waypoints: []
+  doorsOpen: -1
+  currentWaypointIndex: 0
+  pauseTime: 2
+  timeWaited: 0
+  nextWaypoint: 0
+  lookAheadWaypoint: 0
 --- !u!1 &2917756962434938235
 GameObject:
   m_ObjectHideFlags: 0
