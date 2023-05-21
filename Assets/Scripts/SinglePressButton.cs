@@ -32,7 +32,9 @@ public class SinglePressButton : MonoBehaviour, IInteractable
         GetComponentInChildren<Renderer>().material = activatedMaterial;
         foreach (var item in linkedObjects)
         {
+            Debug.Log("inside foreach");
             if(item.TryGetComponent<IInteractable>(out var interactable)){
+                Debug.Log("found interactable");
                 interactable.Interact();
                 return;
             }

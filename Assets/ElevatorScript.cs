@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorScript : MonoBehaviour
+public class ElevatorScript : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isActive = false;
+
+    public void Interact()
     {
-        
+        isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public string GetInteractText()
     {
-        
+        return "Elevator activated";
     }
 }

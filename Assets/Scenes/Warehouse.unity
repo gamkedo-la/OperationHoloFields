@@ -8227,6 +8227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee6abb9f5a669458b806c1b4675041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!1 &258020525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2571092815489254009, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
@@ -14216,7 +14217,7 @@ PrefabInstance:
     - target: {fileID: 1199706727, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: linkedObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 923991752}
+      objectReference: {fileID: 1095060107}
     - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_Name
       value: SinglePressButton (1)
@@ -30020,7 +30021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_Name
-      value: SinglePressButton (1)
+      value: ElevatorSinglePressButton (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_TagString
@@ -30082,7 +30083,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1199706727, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
 --- !u!4 &1095060105 stripped
 Transform:
@@ -30116,6 +30118,23 @@ MonoBehaviour:
   couldBeOrCurrentlyInteractedByPlayer: 0
   childObjectWithActualMeshesAndMaterials: {fileID: 1095060106}
   myGameObject: {fileID: 1095060107}
+--- !u!114 &1095060116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095060107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e8a28229f3b7647b42b76e919d2da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedObjects: []
+  hasBeenActivated: 0
+  canBeActivated: 0
+  inactiveMaterial: {fileID: 2100000, guid: da35a99afc742044ebf9f74918c633dc, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 43741043ede746645902e60a5b38f4a9, type: 2}
 --- !u!1001 &1101388984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56654,7 +56673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552904245968287185, guid: 6c593a6ee6800714097f385f27042212, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5552904245968287186, guid: 6c593a6ee6800714097f385f27042212, type: 3}
       propertyPath: m_RootOrder
