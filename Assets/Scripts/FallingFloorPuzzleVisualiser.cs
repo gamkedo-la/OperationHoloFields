@@ -15,11 +15,16 @@ public class FallingFloorPuzzleVisualiser : MonoBehaviour
         }
         foreach (var block in blocks)
         {
+            if(block == null){
+                continue;
+            }
             Gizmos.color = block.IsFallingBlock ? Color.red : Color.green;
             Vector3 blockPosition = block.transform.position;
             Vector3 visualisationPosition = new Vector3(blockPosition.x + block.transform.localScale.x/2, blockPosition.y + 1, blockPosition.z + block.transform.localScale.z/2);
             Gizmos.DrawCube(visualisationPosition, new Vector3(2, 1, 2));
         }
     }
+
+    
 
 }
