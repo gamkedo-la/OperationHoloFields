@@ -27,7 +27,6 @@ public class LiftScript : MonoBehaviour, IInteractable
     [ContextMenu("LiftTheLift")]
     public void LiftTheLift()
     {
-        Debug.Log("inside LiftTheLift");
         if (!isActivated || myState == "I am animating")
         {
             Debug.Log("the lift isn't activated");

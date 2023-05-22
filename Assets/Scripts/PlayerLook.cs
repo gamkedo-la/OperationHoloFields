@@ -17,6 +17,8 @@ public class PlayerLook : MonoBehaviour
     public MeshRenderer currentInteractableObjectMeshRenderer;
     public GameObject[] arrayOfInteractableObjects;
 
+    private PlayerGrab playerGrabScript;
+
     public void OnLook(InputAction.CallbackContext context)
     {
         rotationAmount = context.ReadValue<Vector2>();
@@ -30,6 +32,8 @@ public class PlayerLook : MonoBehaviour
 
         upDownRotation = 0f;
         arrayOfInteractableObjects = GameObject.FindGameObjectsWithTag("Interactable");
+
+        playerGrabScript = gameObject.transform.GetComponent<PlayerGrab>();
     }
 
     // Update is called once per frame
@@ -49,6 +53,12 @@ public class PlayerLook : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance) && hit.transform.tag == "Interactable")
         {
             currentInteractableObject = hit.transform.gameObject;
+
+            if (currentInteractableObject.name == "SinglePressButton (1)")
+            {
+                playerGrabScript.shouldntDropStuff = true;
+            }
+
             for (int i = 0; i < arrayOfInteractableObjects.Length; i++)
             {
                 if (arrayOfInteractableObjects[i] == currentInteractableObject)
@@ -70,6 +80,8 @@ public class PlayerLook : MonoBehaviour
             {
                 arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
                         arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().originalMaterial;
+
+                playerGrabScript.shouldntDropStuff = false;
             }
         }
     }

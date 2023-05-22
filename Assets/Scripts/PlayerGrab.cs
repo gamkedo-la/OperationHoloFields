@@ -9,6 +9,8 @@ public class PlayerGrab : MonoBehaviour
     float grabTimer = 0f;
     Rigidbody grabbedObjectRigidBody;
 
+    public bool shouldntDropStuff = false;
+
     float minGrabTime = 0.25f;
 
     // Start is called before the first frame update
@@ -72,7 +74,11 @@ public class PlayerGrab : MonoBehaviour
 
     public void Drop()
     {
-        Debug.Log("Dropping");
+        if (shouldntDropStuff)
+        {
+            return;
+        }
+
         if (grabbedObjectRigidBody != null)
         {
             grabbedObjectRigidBody.velocity = Vector3.zero;
