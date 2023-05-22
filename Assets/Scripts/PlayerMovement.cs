@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         float airControlPerc = 1.0f;
         if (isLeaping)
         {
-            airControlPerc = 0.0f;
+            airControlPerc = 0.5f;
         }
         else if (isJumping)
         {
