@@ -45,6 +45,7 @@ namespace AutonomousMovement
         [SerializeField] AutonomousMovementWaypoint nextWaypointObject { get => waypoints[nextWaypoint]; }
         public void Move()
         {
+            if(this.waypoints.Length == 0){ return; }
             // Check the distance from the current waypoint to the next waypoint, and move the object towards the next waypoint
             float waypointDistance = Vector3.Distance(this.transform.position, this.Waypoints[currentWaypointIndex].position);
             float currentWaypointRadius = this.Waypoints[currentWaypointIndex].radius;
@@ -103,7 +104,7 @@ namespace AutonomousMovement
         {
             // Set the current waypoint to the first waypoint in the array
             RoombaDoorPress.RoombaDoorTriggered += UpdatePathWithDoor;
-            this.currentWaypoint = this.waypoints[0];
+            if(waypoints.Length > 0){this.currentWaypoint = this.waypoints[0];}
             currentWaypointIndex = System.Array.IndexOf(this.waypoints, this.currentWaypoint);
             this.doorWaypoints[0] = this.door1Waypoints;
         }
