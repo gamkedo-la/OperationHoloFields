@@ -866,6 +866,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e58da83919af464ebecaa87613e961f, type: 3}
+--- !u!114 &150440684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2571092815328825454, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+  m_PrefabInstance: {fileID: 2571092815205947353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &168754174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,6 +2770,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f689fec3df558541abf9509d535921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &389451413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5552904245424376337, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+  m_PrefabInstance: {fileID: 5552904246794561749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &414137740
@@ -7815,6 +7837,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holoScaleAmount: 1.1
+--- !u!1 &1615287990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7991295213314364603, guid: 70ad9b22b99f5f54c94958d28f3f4c0f, type: 3}
+  m_PrefabInstance: {fileID: 8241671234875467840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1629269931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8279491377446179015, guid: c4d5d857833741f4fb2819cce0754959, type: 3}
@@ -10241,6 +10268,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 307792601}
+    - target: {fileID: 2571092815489254012, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: currentLevelStartingSpawnpoint
+      value: 
+      objectReference: {fileID: 1615287990}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
 --- !u!1001 &5552904246794561749
@@ -10251,9 +10282,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_DirectorUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 963194229}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[0].first
+      value: 244c0e2558c1ab34980048d1e6d26c8f
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[1].first
+      value: ee9c22623c1abfd458d1c8a6367680f4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[2].first
+      value: f18d5e9a2bff6c547a5dad6d16a98f2c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[0].second
+      value: 
+      objectReference: {fileID: 150440684}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[1].second
+      value: 
+      objectReference: {fileID: 389451413}
+    - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_ExposedReferences.m_References.Array.data[2].second
+      value: 
+      objectReference: {fileID: 150440684}
     - target: {fileID: 5552904245968287185, guid: 6c593a6ee6800714097f385f27042212, type: 3}
       propertyPath: m_Name
       value: DoorContainer

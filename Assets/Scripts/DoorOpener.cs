@@ -7,7 +7,6 @@ public class DoorOpener : MonoBehaviour, IInteractable
     [SerializeField] PlayableDirector playableDirector;
     [SerializeField] AudioSource openSound;
     private bool hasBeenActivated = false;
-
     public string GetInteractText()
     {
         return "Open Door";
@@ -25,7 +24,6 @@ public class DoorOpener : MonoBehaviour, IInteractable
         openSound.Play();
         hasBeenActivated = true;
     }
-
     // private void OnTriggerEnter(Collider other) 
     // {
     //     if (!other.CompareTag("Player")) return;
@@ -34,7 +32,6 @@ public class DoorOpener : MonoBehaviour, IInteractable
     //     PlayerInteract playerInteract = other.GetComponent<PlayerInteract>();
     //     playerInteract.SetInteractibleObject(gameObject);
     // }
-
     // private void OnTriggerExit(Collider other) 
     // {
         
