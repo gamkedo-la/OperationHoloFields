@@ -5,8 +5,16 @@ using UnityEngine;
 public class LiftScript : MonoBehaviour, IInteractable
 {
     public bool isActivated = false;
-    public string myState = "I am down";
-    private Animator myAnimator;
+    public LiftAnimState myState = LiftAnimState.Down;
+    public enum LiftAnimState
+    {
+        Down,
+        Up,
+        MovingHorizontally,
+        Animating
+    }
+
+    public Animator myAnimator;
     
 
     private void Start()
@@ -27,7 +35,8 @@ public class LiftScript : MonoBehaviour, IInteractable
     [ContextMenu("LiftTheLift")]
     public void LiftTheLift()
     {
-        if (!isActivated || myState == "I am animating")
+        Debug.Log("inside LiftTheLift");
+        if (!isActivated || myState == LiftAnimState.Animating)
         {
             Debug.Log("the lift isn't activated");
 
@@ -35,26 +44,31 @@ public class LiftScript : MonoBehaviour, IInteractable
         }
         else
         {
-            if (myState == "I am down")
+            if (myState == LiftAnimState.Down)
             {
                 myAnimator.SetTrigger("AnimateLiftUp");
-                myState = "I am animating";
+                myState = LiftAnimState.Animating;
             }
-            else if (myState == "I am up")
+            else if (myState == LiftAnimState.Up)
             {
                 myAnimator.SetTrigger("AnimateLiftDown");
-                myState = "I am animating";
+                myState = LiftAnimState.Animating;
             }
         }
     }
 
     public void ChangeStateToIAmUp()
     {
-        myState = "I am up";
+        myState = LiftAnimState.Up;
     }
 
     public void ChangeStateToIAmDown()
     {
-        myState = "I am down";
+        myState = LiftAnimState.Down;
+    }
+
+    public void ChangeStateToIAmMovingHorizontally()
+    {
+        myState = LiftAnimState.MovingHorizontally;
     }
 }
