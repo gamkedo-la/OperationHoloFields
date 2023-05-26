@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LiftScript : MonoBehaviour, IInteractable
@@ -15,13 +13,19 @@ public class LiftScript : MonoBehaviour, IInteractable
     }
 
     public Animator myAnimator;
-    
 
-    private void Start()
+    private void Awake() 
     {
         myAnimator = transform.GetComponent<Animator>();
-        
     }
+    
+    private void Start()
+    {
+        myAnimator.ResetTrigger("AnimateLiftUp");
+        myAnimator.ResetTrigger("AnimateLiftDown");
+        myAnimator.ResetTrigger("AnimateMoveLiftHorizontally");
+    }
+
     public string GetInteractText()
     {
         return "Lifting the lift";
