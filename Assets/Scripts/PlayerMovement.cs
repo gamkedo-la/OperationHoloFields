@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
 
-    private float dashJumpSpeed = 1.5f;
+    private float dashJumpSpeed = 1.0f;
     private float jumpGraceTimer = 0.0f;
 
     private bool isJumping = false;
