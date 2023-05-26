@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 1.0f;
     [SerializeField] float maxJumpHeight = 3f;
     [SerializeField] float maxJumpTime = 3f;
+    [SerializeField] float dashJumpSpeed = 1.0f;
     [SerializeField] float jumpGraceSecs = 0.25f;
     [SerializeField] GameObject movementSoundHandler;
     [SerializeField] float SecsBetweenMoveSounds = 0.5f;
@@ -14,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 playerVelocity = new Vector3(0, 0, 0);
 
-    private float dashJumpSpeed = 1.0f;
     private float jumpGraceTimer = 0.0f;
 
     private bool isJumping = false;
@@ -40,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
 
         gameObject.transform.position = currentLevelStartingSpawnpoint.transform.position;
+    }
+
+    private void OnValidate() {
+        SetJumpParameters();
     }
 
     private void SetJumpParameters()
