@@ -15905,7 +15905,7 @@ PrefabInstance:
     - target: {fileID: 1199706727, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: linkedObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1095060107}
+      objectReference: {fileID: 1118479069}
     - target: {fileID: 3100824746786088052, guid: 63ef2a8e6455a9c42b27b11b2f8c20f4, type: 3}
       propertyPath: m_Name
       value: SinglePressButton (1)
@@ -34039,6 +34039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a875a67ebbee44787f445caec784f3, type: 3}
+--- !u!1 &1118479069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5552904245968287185, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+  m_PrefabInstance: {fileID: 2118808857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1120702716
 PrefabInstance:
   m_ObjectHideFlags: 0
