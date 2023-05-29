@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerStation1Script : MonoBehaviour
@@ -19,8 +17,13 @@ public class PowerStation1Script : MonoBehaviour
     {
         if (other.gameObject.name == "EnergyCrate")
         {
-            liftScript.isActivated = true;
-            singlePressButtonScript.canBeActivated = true;
+            ActivateButton();
         }
+    }
+
+    public void ActivateButton()
+    {
+        liftScript.isActivated = true;
+        singlePressButtonScript.canBeActivated = true;
     }
 }

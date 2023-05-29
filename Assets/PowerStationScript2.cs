@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerStationScript2 : MonoBehaviour
@@ -15,8 +13,13 @@ public class PowerStationScript2 : MonoBehaviour
     {
         if (other.gameObject.name == "EnergyCrate")
         {
-            singlePressButtonScript.canBeActivated = true;
-            Debug.Log("horizontal movement of lift button activated");
+            ActivateButton();
         }
+    }
+
+    public void ActivateButton()
+    {
+        singlePressButtonScript.canBeActivated = true;
+        Debug.Log("horizontal movement of lift button activated");
     }
 }
