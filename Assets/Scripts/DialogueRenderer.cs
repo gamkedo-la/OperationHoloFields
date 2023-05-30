@@ -1,8 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
 using TMPro;
 
 public class DialogueRenderer : MonoBehaviour
@@ -10,11 +10,12 @@ public class DialogueRenderer : MonoBehaviour
     [SerializeField] private Image dialogueBackground;
     [SerializeField] private TMP_Text textComponent;
     [SerializeField] private float sceneLoadTextDisplayDelay;
+    [SerializeField] private float dialogueRendererSpeed = 0.05f;
     private bool isDialogueEnabled = false;
 
     private void OnEnable()
     {
-        Invoke("ShowSceneInitialDialogue", sceneLoadTextDisplayDelay);
+        // Invoke("ShowSceneInitialDialogue", sceneLoadTextDisplayDelay);
     }
 
     public void ShowSceneInitialDialogue()
@@ -46,19 +47,33 @@ public class DialogueRenderer : MonoBehaviour
     public void HideDialogue()
     {
         dialogueBackground.enabled = false;
-        transform.GetChild(0).gameObject.SetActive(false);
+        textComponent.gameObject.SetActive(false);
         isDialogueEnabled = false;
     }
 
     public void ShowDialogue(string dialogueToShow)
     {
-        if (dialogueToShow != null)
-        {
-            SetText(dialogueToShow);
-        }
+        if (dialogueToShow == null) return;
+
         dialogueBackground.enabled = true;
-        transform.GetChild(0).gameObject.SetActive(true);
+        textComponent.gameObject.SetActive(true);
         isDialogueEnabled = true;
+
+        StartCoroutine(DisplayTextLetterByLetter(dialogueToShow));
+    }
+
+    private IEnumerator DisplayTextLetterByLetter(string dialogueToShow)
+    {
+        string dialogueShowed = string.Empty;
+
+        for (int i = 0; i < dialogueToShow.Length; i++)
+        {
+            dialogueShowed += dialogueToShow[i];
+            SetText(dialogueShowed);
+            yield return new WaitForSeconds(dialogueRendererSpeed);
+        }
+
+        yield return null;
     }
 
     private void Update() {

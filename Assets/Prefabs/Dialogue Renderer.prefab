@@ -93,6 +93,7 @@ MonoBehaviour:
   dialogueBackground: {fileID: 3279110101604345309}
   textComponent: {fileID: 3279110102968761244}
   sceneLoadTextDisplayDelay: 0.2
+  dialogueRendererSpeed: 0.01
 --- !u!1 &3279110102509827813
 GameObject:
   m_ObjectHideFlags: 0
