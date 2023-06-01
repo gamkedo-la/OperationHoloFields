@@ -23,6 +23,7 @@ public class PowerStation1Script : MonoBehaviour
 
     public void ActivateButton()
     {
+        print("Youpie");
         liftScript.isActivated = true;
         singlePressButtonScript.canBeActivated = true;
     }
