@@ -65,11 +65,22 @@ public class PlayerLook : MonoBehaviour
                 {
                     currentInteractableObjectScript = currentInteractableObject.GetComponent<InteractableObjectScript>();
                     currentInteractableObjectMeshRenderer = currentInteractableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>();
+
+                    if (!currentInteractableObjectScript.GetIsHighlighted())
+                    {
+                        currentInteractableObjectScript.originalMaterial = currentInteractableObjectMeshRenderer.material;
+                        currentInteractableObjectScript.SetIsHighlighted(true);
+                    }
                     currentInteractableObjectMeshRenderer.material = currentInteractableObjectScript.interactableHighlightMaterial;
                 }
                 else
                 {
-                    arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
+                    InteractableObjectScript otherInteractableObjectScript = arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>();
+                    if (otherInteractableObjectScript.GetIsHighlighted())
+                    {
+                        otherInteractableObjectScript.SetIsHighlighted(false);
+                    }
+                    otherInteractableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
                         arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().originalMaterial;
                 }
             } 
@@ -78,8 +89,13 @@ public class PlayerLook : MonoBehaviour
         {
             for (int i = 0; i < arrayOfInteractableObjects.Length; i++)
             {
-                arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
-                        arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().originalMaterial;
+                InteractableObjectScript interactableObjectScript = arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>();
+                if (interactableObjectScript.GetIsHighlighted())
+                {
+                    interactableObjectScript.SetIsHighlighted(false);
+                }
+                interactableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
+                        interactableObjectScript.originalMaterial;
 
                 playerGrabScript.shouldntDropStuff = false;
             }

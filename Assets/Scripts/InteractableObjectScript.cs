@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractableObjectScript : MonoBehaviour
@@ -9,12 +7,25 @@ public class InteractableObjectScript : MonoBehaviour
     public bool couldBeOrCurrentlyInteractedByPlayer = false;
     public GameObject childObjectWithActualMeshesAndMaterials;
     public GameObject myGameObject;
+    private bool isHighLighted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         childObjectWithActualMeshesAndMaterials = gameObject.transform.GetChild(0).gameObject;
+        originalMaterial = childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material;
+        
         myGameObject = gameObject;
+    }
+
+    public void SetIsHighlighted(bool value)
+    {
+        isHighLighted = value;
+    }
+
+    public bool GetIsHighlighted()
+    {
+        return isHighLighted;
     }
 
     
