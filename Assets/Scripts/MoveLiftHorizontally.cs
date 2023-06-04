@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static LiftScript;
 
@@ -26,10 +24,9 @@ public class MoveLiftHorizontally : MonoBehaviour, IInteractable
     public void MoveLift()
     {
         Debug.Log("inside MoveLift");
-        if (!liftScript.isActivated || liftScript.myState == LiftAnimState.Animating)
+        if (liftScript.myState == LiftAnimState.Animating)
         {
             Debug.Log("the lift isn't activated");
-
             return;
         }
         else

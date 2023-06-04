@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class LiftScript : MonoBehaviour, IInteractable
 {
-    public bool isActivated = false;
     public LiftAnimState myState = LiftAnimState.Down;
     public enum LiftAnimState
     {
@@ -40,7 +39,7 @@ public class LiftScript : MonoBehaviour, IInteractable
     public void LiftTheLift()
     {
         Debug.Log("inside LiftTheLift");
-        if (!isActivated || myState == LiftAnimState.Animating)
+        if (myState == LiftAnimState.Animating)
         {
             Debug.Log("the lift isn't activated");
 

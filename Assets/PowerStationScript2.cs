@@ -20,6 +20,5 @@ public class PowerStationScript2 : MonoBehaviour
     public void ActivateButton()
     {
         singlePressButtonScript.canBeActivated = true;
-        Debug.Log("horizontal movement of lift button activated");
     }
 }
