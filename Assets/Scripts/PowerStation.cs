@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PowerStationScript2 : MonoBehaviour
+public class PowerStation : MonoBehaviour
 {
     [SerializeField] GameObject myButton;
     private SinglePressButton singlePressButtonScript;
@@ -13,12 +13,7 @@ public class PowerStationScript2 : MonoBehaviour
     {
         if (other.gameObject.name == "EnergyCrate")
         {
-            ActivateButton();
+            singlePressButtonScript.Activate();
         }
-    }
-
-    public void ActivateButton()
-    {
-        singlePressButtonScript.canBeActivated = true;
     }
 }

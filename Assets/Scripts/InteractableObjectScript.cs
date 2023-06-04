@@ -13,8 +13,6 @@ public class InteractableObjectScript : MonoBehaviour
     void Start()
     {
         childObjectWithActualMeshesAndMaterials = gameObject.transform.GetChild(0).gameObject;
-        originalMaterial = childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material;
-        
         myGameObject = gameObject;
     }
 

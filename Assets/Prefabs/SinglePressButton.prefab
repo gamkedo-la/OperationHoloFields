@@ -62,10 +62,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedObjects:
   - {fileID: 0}
-  hasBeenActivated: 0
   canBeActivated: 1
-  inactiveMaterial: {fileID: 2100000, guid: da35a99afc742044ebf9f74918c633dc, type: 2}
-  activatedMaterial: {fileID: 2100000, guid: 43741043ede746645902e60a5b38f4a9, type: 2}
+  unpressedMaterial: {fileID: 2100000, guid: 57698a948f8f6434698eac0013395689, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 5bb9ad18f928ad940bae6c535ea128be, type: 2}
+  activeMaterial: {fileID: 2100000, guid: c5d5232504247ee458cbc473191ecd28, type: 2}
+  inactiveMaterial: {fileID: 2100000, guid: cafbf21eb2975fc44843a594a10fd70f, type: 2}
+  canBePressedOnlyOnce: 1
 --- !u!114 &2216693568652798168
 MonoBehaviour:
   m_ObjectHideFlags: 0

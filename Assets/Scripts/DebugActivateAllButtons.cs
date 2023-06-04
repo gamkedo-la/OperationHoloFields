@@ -10,8 +10,13 @@ public class DebugActivateAllButtons : MonoBehaviour
         if (!allButtonsActive && Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Activating All Buttons!");
-            FindObjectOfType<PowerStation1Script>().ActivateButton();
-            FindObjectOfType<PowerStationScript2>().ActivateButton();
+            foreach(SinglePressButton button in FindObjectsOfType<SinglePressButton>())
+            {
+                if (!button.canBeActivated)
+                {
+                    button.Activate();
+                }
+            }
             allButtonsActive = true;
         }
     }
