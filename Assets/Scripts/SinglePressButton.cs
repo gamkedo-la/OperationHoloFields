@@ -8,12 +8,14 @@ public class SinglePressButton : MonoBehaviour, IInteractable
     public bool canBeActivated = false;
     [SerializeField] Material inactiveMaterial;
     [SerializeField] Material activatedMaterial;
-    public MeshRenderer meshRenderer;
+    [SerializeField] bool canBePressedOnlyOnce = true;
+    private bool hasBeenPressedOnce = false;
+    private MeshRenderer meshRenderer;
 
 
-    private void Awake() {
+    private void Awake() 
+    {
         meshRenderer = GetComponentInChildren<MeshRenderer>();
-        // GetComponentInChildren<Renderer>().material = inactiveMaterial;
     }
 
     private void Start()
@@ -32,9 +34,6 @@ public class SinglePressButton : MonoBehaviour, IInteractable
         {
             interactableObject.originalMaterial = material;
         }
-
-        // print(meshRenderer.materials[0]);
-        // print(GetComponentInChildren<MeshRenderer>().materials[0]);
     }
 
     public string GetInteractText()
@@ -44,12 +43,11 @@ public class SinglePressButton : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        
-        if(/*hasBeenActivated ||*/ !canBeActivated){
-            return;
-        }
+        if(canBePressedOnlyOnce && hasBeenPressedOnce) return;
+        if(!canBeActivated) return;
 
-        hasBeenActivated = true;
+        if (!hasBeenPressedOnce) hasBeenPressedOnce = true;
+
         SetButtonCenterMaterial(activatedMaterial);
         foreach (var item in linkedObjects)
         {
@@ -59,7 +57,6 @@ public class SinglePressButton : MonoBehaviour, IInteractable
             }
 
             Debug.LogWarning("Linked Object in " + transform + " does not have an IInteractable component!");
-
         }
     }
 }
