@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SinglePressButton : MonoBehaviour, IInteractable
 {
@@ -84,7 +86,20 @@ public class SinglePressButton : MonoBehaviour, IInteractable
 
     public void Activate()
     {
+        StartCoroutine(AnimateActivation());
         canBeActivated = true;
+    }
+
+    private IEnumerator AnimateActivation()
+    {
+        PlayableDirector playableDirector = GetComponent<PlayableDirector>();
+        if(playableDirector != null)
+        {
+            playableDirector.Play();
+            float duration = (float) playableDirector.duration / 2f;
+            yield return new WaitForSeconds(duration);
+        }
         SetButtonSurroundingMaterial(activeMaterial);
+        yield return null;
     }
 }
