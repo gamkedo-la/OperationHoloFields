@@ -236,6 +236,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4856321426205826110, guid: 83b92968aa5c188409781f10c3d803c6, type: 2}
     value: {fileID: 5552904245239028591}
+  - key: {fileID: 4485274563212736382, guid: 83b92968aa5c188409781f10c3d803c6, type: 2}
+    value: {fileID: 4635954967535475545}
   m_ExposedReferences:
     m_References:
     - ee9c22623c1abfd458d1c8a6367680f4: {fileID: 5552904245424376337}
@@ -402,6 +404,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6d4230873616fcb4ab2910f816b878cd, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: cafbf21eb2975fc44843a594a10fd70f, type: 2}
     - target: {fileID: 919132149155446097, guid: 6d4230873616fcb4ab2910f816b878cd, type: 3}
       propertyPath: m_Name
       value: Door
@@ -519,6 +525,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ef5cdd87d5e84d947a4f57c332fed1c6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cafbf21eb2975fc44843a594a10fd70f, type: 2}
     - target: {fileID: 919132149155446097, guid: ef5cdd87d5e84d947a4f57c332fed1c6, type: 3}
       propertyPath: m_Name
       value: DoorFrame
@@ -544,6 +554,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: ef5cdd87d5e84d947a4f57c332fed1c6, type: 3}
+--- !u!95 &4635954967535475545
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741878280307963142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &5369796540142792636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef5cdd87d5e84d947a4f57c332fed1c6, type: 3}
