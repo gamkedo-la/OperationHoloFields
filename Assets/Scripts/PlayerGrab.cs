@@ -23,10 +23,6 @@ public class PlayerGrab : MonoBehaviour
     void Update()
     {
         grabTimer += Time.deltaTime;
-
-
-
-
     }
 
     private void FixedUpdate()
@@ -58,6 +54,7 @@ public class PlayerGrab : MonoBehaviour
         }
 
         this.grabbedObject = grabbedObject;
+        grabbedObject.SetIsGrabbed(true);
         if (grabbedObject.TryGetComponent<Rigidbody>(out grabbedObjectRigidBody))
         {
             grabbedObjectRigidBody.useGravity = false;
@@ -84,6 +81,7 @@ public class PlayerGrab : MonoBehaviour
             grabbedObjectRigidBody.velocity = Vector3.zero;
             grabbedObjectRigidBody.useGravity = true;
             grabbedObjectRigidBody.constraints = RigidbodyConstraints.None;
+            grabbedObject.SetIsGrabbed(false);
         }
         grabbedObject = null;
         grabTimer = 0f;
