@@ -59853,6 +59853,50 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00025300685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00025300685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 41.282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376336, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 41.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552904245424376342, guid: 6c593a6ee6800714097f385f27042212, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5552904245968287184, guid: 6c593a6ee6800714097f385f27042212, type: 3}
       propertyPath: m_SceneBindings.Array.size
       value: 3
