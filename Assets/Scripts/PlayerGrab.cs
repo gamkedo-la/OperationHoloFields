@@ -6,6 +6,8 @@ public class PlayerGrab : MonoBehaviour
 
     Grabbable grabbedObject;
     [SerializeField] Transform grabLocation;
+
+    [SerializeField] float lerpSpeed = 10f;
     float grabTimer = 0f;
     Rigidbody grabbedObjectRigidBody;
 
@@ -32,7 +34,6 @@ public class PlayerGrab : MonoBehaviour
             return;
         }
 
-        float lerpSpeed = 10f;
         Vector3 newPosition = Vector3.Lerp(grabbedObject.transform.position, grabLocation.position, Time.deltaTime * lerpSpeed);
 
         if (grabbedObjectRigidBody == null)
