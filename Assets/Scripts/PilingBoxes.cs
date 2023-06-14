@@ -4,7 +4,7 @@ public class PilingBoxes : MonoBehaviour
 {
     [SerializeField] Grabbable cubeToPileOnTop;
     [SerializeField] float cubeToPileSpeed = 10f;
-    private bool otherCubeIsMoving = false;
+    public bool otherCubeIsMoving = false;
 
     private void Update() 
     {
@@ -31,7 +31,7 @@ public class PilingBoxes : MonoBehaviour
         other.gameObject.tag = "Untagged";
         other.gameObject.GetComponent<Grabbable>().SetGrabEnabled(false);
         other.transform.SetParent(transform);
-        other.GetComponent<Rigidbody>().useGravity = false;
+        other.GetComponent<Rigidbody>().isKinematic = true;
         other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 
         other.transform.localPosition = new Vector3(

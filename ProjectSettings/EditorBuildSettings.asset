@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Warehouse.unity
     guid: 03d1f2fc0af9e0c4eadf3b5f828f6234
   - enabled: 1
+    path: Assets/Scenes/TheCorridor.unity
+    guid: e3dd9a6c0a1c71949b12dd1cf22e5258
+  - enabled: 1
     path: Assets/Scenes/H.E.L.L.unity
     guid: 798c35130854e3f49ae191f952caf274
   m_configObjects: {}
