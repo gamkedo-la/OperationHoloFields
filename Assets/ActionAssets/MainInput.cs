@@ -337,6 +337,17 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""93b389b5-600e-433f-9172-c567c55a2c99"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ef09c7c-8eb6-4a39-97f2-0f9874168c54"",
                     ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",

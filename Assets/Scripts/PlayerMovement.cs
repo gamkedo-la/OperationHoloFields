@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private MovementSoundController movementSounds;
     private float moveSoundCooldownTimer = 0f;
 
-    [SerializeField] GameObject pauseMenu;
-    public bool gameIsPaused = false;
 
     [SerializeField] GameObject currentLevelStartingSpawnpoint;
 
@@ -169,26 +167,4 @@ public class PlayerMovement : MonoBehaviour
 
         moveSoundCooldownTimer -= Time.deltaTime;
     }
-
-    public void TogglePause()
-    {
-        Debug.Log("p key recognized");
-        if (!gameIsPaused)
-        {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0;
-            gameIsPaused = true;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else if (gameIsPaused)
-        {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1;
-            gameIsPaused = false;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
-
 }
