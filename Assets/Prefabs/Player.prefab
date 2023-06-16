@@ -45,7 +45,9 @@ GameObject:
   - component: {fileID: 124199502088269499}
   - component: {fileID: 720317496802610367}
   - component: {fileID: 4274894045013448453}
-  - component: {fileID: 3864300562363727830}
+  - component: {fileID: 6369018456976910203}
+  - component: {fileID: 2798874139022207021}
+  - component: {fileID: 8464672027896297687}
   m_Layer: 0
   m_Name: ScanlineRawImage
   m_TagString: Untagged
@@ -120,7 +122,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ccc7f9394dea14cb6ebbf9caa422ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3864300562363727830
+--- !u!82 &6369018456976910203
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205784499699635069}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2798874139022207021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205784499699635069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ccc7f9394dea14cb6ebbf9caa422ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8464672027896297687
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -153,6 +263,7 @@ GameObject:
   - component: {fileID: 6202026274883611642}
   - component: {fileID: 7436434525832572329}
   - component: {fileID: 7302311475258601139}
+  - component: {fileID: 5154360368731821243}
   m_Layer: 0
   m_Name: Crosshair
   m_TagString: Untagged
@@ -242,6 +353,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &5154360368731821243
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428923285528322635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &611801385386344543
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +385,7 @@ GameObject:
   - component: {fileID: 6516465184404700899}
   - component: {fileID: 6867157066444791865}
   - component: {fileID: 8726105417208459266}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderText (TMP) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +523,7 @@ GameObject:
   - component: {fileID: 4231339806758745932}
   m_Layer: 0
   m_Name: Scanline Effect
-  m_TagString: Holo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +621,7 @@ GameObject:
   - component: {fileID: 6910931023978246627}
   - component: {fileID: 2152502420543488909}
   - component: {fileID: 1235090486877305775}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderText (TMP) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +756,7 @@ GameObject:
   - component: {fileID: 7893334956785367202}
   - component: {fileID: 8833126432340882733}
   - component: {fileID: 930391159279884419}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088589940223003168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0.25, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,7 +867,7 @@ GameObject:
   - component: {fileID: 5037432925475166631}
   - component: {fileID: 219917228566290816}
   - component: {fileID: 7040216818924597909}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CommandsButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +1003,7 @@ GameObject:
   - component: {fileID: 896177180886042424}
   - component: {fileID: 993467872372058414}
   - component: {fileID: 6773858249299261199}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,6 +1145,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4918622093159292168}
+  - {fileID: 3683017031266311063}
   m_Father: {fileID: 4630484399482755887}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1082,6 +1215,82 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &2559281310960906941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3683017031266311063}
+  - component: {fileID: 8860007787236007130}
+  - component: {fileID: 3966620084671212966}
+  m_Layer: 0
+  m_Name: FadeImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3683017031266311063
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559281310960906941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.971613}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8147543910274014859}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8860007787236007130
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559281310960906941}
+  m_CullTransparentMesh: 1
+--- !u!114 &3966620084671212966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559281310960906941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2897521934617333371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1864,7 @@ GameObject:
   - component: {fileID: 7561854417076531632}
   - component: {fileID: 6110698546472238660}
   - component: {fileID: 6862410642867980664}
+  - component: {fileID: 4446583920861735111}
   m_Layer: 0
   m_Name: RawImage
   m_TagString: Untagged
@@ -1717,6 +1927,27 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!95 &4446583920861735111
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196340739155502298}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4092167207178549274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,7 +1959,7 @@ GameObject:
   - component: {fileID: 2070219776859399116}
   - component: {fileID: 5544672289650635390}
   - component: {fileID: 5138004345741082524}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderText (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2505,7 +2736,7 @@ GameObject:
   - component: {fileID: 5923290195518564021}
   - component: {fileID: 1497921457290424111}
   - component: {fileID: 5173708969793644327}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RestartButtonText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2640,7 +2871,7 @@ GameObject:
   - component: {fileID: 2763634881651361448}
   - component: {fileID: 2874004357783178447}
   - component: {fileID: 685114710185051052}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2662,9 +2893,9 @@ RectTransform:
   m_Father: {fileID: 8775503307394866861}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 267.6414, y: -58.76301}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 462.365, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2874004357783178447
@@ -2777,7 +3008,7 @@ GameObject:
   - component: {fileID: 1467907611987540233}
   - component: {fileID: 3158509848973864384}
   - component: {fileID: 8730005222720237642}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuRestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2800,9 +3031,9 @@ RectTransform:
   m_Father: {fileID: 6970478558231138103}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303, y: -458.5001}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.1969, y: 55.2581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1388489417663762085
@@ -2865,7 +3096,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2922,7 +3153,7 @@ GameObject:
   - component: {fileID: 6970478558231138103}
   - component: {fileID: 5268186156543392944}
   - component: {fileID: 1886181342578586260}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Buttons Pannels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2998,7 +3229,7 @@ GameObject:
   - component: {fileID: 1219712810443145100}
   - component: {fileID: 1702757123736780255}
   - component: {fileID: 6663095869676429351}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3344,7 @@ GameObject:
   - component: {fileID: 2577368860328662948}
   - component: {fileID: 4278061480954184263}
   - component: {fileID: 3888450717022100094}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3189,7 +3420,7 @@ GameObject:
   - component: {fileID: 4115930905825092303}
   - component: {fileID: 5057220234079459502}
   - component: {fileID: 9160853784156631307}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderBackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3403,7 +3634,7 @@ GameObject:
   - component: {fileID: 4728390355366880503}
   - component: {fileID: 3924572542528456249}
   - component: {fileID: 1255701653749369286}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3491,7 +3722,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3548,7 +3779,7 @@ GameObject:
   - component: {fileID: 3644187554519776314}
   - component: {fileID: 5418931464121534876}
   - component: {fileID: 1268518196222786993}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: RestartButtonText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3811,7 +4042,7 @@ GameObject:
   - component: {fileID: 8414296471720618775}
   - component: {fileID: 447718487405220706}
   - component: {fileID: 4720999081971213010}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ResumeButtonText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3945,7 +4176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8775503307394866861}
   - component: {fileID: 2565192838132803813}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Commands Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4014,7 +4245,7 @@ GameObject:
   - component: {fileID: 4556625993729787656}
   - component: {fileID: 3253180521549004492}
   - component: {fileID: 2115627635138594692}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuHeaderText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4151,7 +4382,7 @@ GameObject:
   - component: {fileID: 7917777745737071290}
   - component: {fileID: 138219797045594773}
   - component: {fileID: 3356234366304657757}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuCommands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4174,9 +4405,9 @@ RectTransform:
   m_Father: {fileID: 6970478558231138103}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303, y: -319.50003}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 283.1969, y: 55.2581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8630579176071282097
@@ -4239,7 +4470,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
