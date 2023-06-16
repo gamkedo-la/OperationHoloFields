@@ -3835,7 +3835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Esc to see commands
+  m_text: P to see commands
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87be80f033ce51142bf653c9134f28e6, type: 2}
   m_sharedMaterial: {fileID: 1542096803138109470, guid: 87be80f033ce51142bf653c9134f28e6, type: 2}
@@ -4380,7 +4380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Esc to Resume
+  m_text: P to Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87be80f033ce51142bf653c9134f28e6, type: 2}
   m_sharedMaterial: {fileID: 1542096803138109470, guid: 87be80f033ce51142bf653c9134f28e6, type: 2}
