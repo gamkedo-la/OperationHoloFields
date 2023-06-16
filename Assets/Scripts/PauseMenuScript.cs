@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -17,5 +18,11 @@ public class PauseMenuScript : MonoBehaviour
         print("Display Command Pannels");
         commandsPannel.SetActive(true);
         pauseButtonsPannel.SetActive(false);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }

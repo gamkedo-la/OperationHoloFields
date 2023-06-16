@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 
 public class MainMenu : MonoBehaviour
 {
@@ -38,10 +35,14 @@ public class MainMenu : MonoBehaviour
     }
 
     public void LoadWarehouse(){
-        SceneManager.LoadScene("Scenes/Warehouse");
+        SceneManager.LoadScene("Warehouse");
     }
     public void LoadHELL(){
-        SceneManager.LoadScene("Scenes/H.E.L.L");
+        SceneManager.LoadScene("H.E.L.L");
+    }
+
+    public void LoadCorridor(){
+        SceneManager.LoadScene("TheCorridor");
     }
 
 }
