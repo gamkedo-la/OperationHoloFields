@@ -64,7 +64,7 @@ public class PlayerLook : MonoBehaviour
                 if (arrayOfInteractableObjects[i] == currentInteractableObject)
                 {
                     currentInteractableObjectScript = currentInteractableObject.GetComponent<InteractableObjectScript>();
-                    currentInteractableObjectMeshRenderer = currentInteractableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>();
+                    currentInteractableObjectMeshRenderer = currentInteractableObjectScript.GetChildWithMesh().GetComponent<MeshRenderer>();
 
                     if (!currentInteractableObjectScript.GetIsHighlighted())
                     {
@@ -80,7 +80,7 @@ public class PlayerLook : MonoBehaviour
                     {
                         otherInteractableObjectScript.SetIsHighlighted(false);
                     }
-                    otherInteractableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
+                    otherInteractableObjectScript.GetChildWithMesh().GetComponent<MeshRenderer>().material =
                         arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().originalMaterial;
                 }
             } 
@@ -94,7 +94,7 @@ public class PlayerLook : MonoBehaviour
                 {
                     interactableObjectScript.SetIsHighlighted(false);
                 }
-                interactableObjectScript.childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().material =
+                interactableObjectScript.GetChildWithMesh().GetComponent<MeshRenderer>().material =
                         interactableObjectScript.originalMaterial;
 
                 playerGrabScript.shouldntDropStuff = false;

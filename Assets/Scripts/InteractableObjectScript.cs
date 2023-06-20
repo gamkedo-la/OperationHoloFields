@@ -5,10 +5,10 @@ public class InteractableObjectScript : MonoBehaviour
     public Material originalMaterial;
     public Material interactableHighlightMaterial;
     public bool couldBeOrCurrentlyInteractedByPlayer = false;
-    public GameObject childObjectWithActualMeshesAndMaterials;
-    public GameObject myGameObject;
+    private GameObject childObjectWithActualMeshesAndMaterials;
+    private GameObject myGameObject;
     private bool isHighLighted = false;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +26,9 @@ public class InteractableObjectScript : MonoBehaviour
         return isHighLighted;
     }
 
+    public GameObject GetChildWithMesh()
+    {
+        return childObjectWithActualMeshesAndMaterials;
+    }
     
 }
