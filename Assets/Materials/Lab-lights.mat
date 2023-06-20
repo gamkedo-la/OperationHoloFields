@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lab-walls
+  m_Name: Lab-lights
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _EMISSION
@@ -79,5 +79,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.8459119, g: 0.98514813, b: 1, a: 1}
-    - _EmissionColor: {r: 0.35510856, g: 0.4245283, b: 0.4245283, a: 1}
+    - _EmissionColor: {r: 0.8198554, g: 1.8649458, b: 1.8649458, a: 1}
   m_BuildTextureStacks: []
