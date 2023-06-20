@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class DocumentRenderer : MonoBehaviour, IInteractable
 {
     [SerializeField] DocumentsScriptableObject documentScriptableObject;
     [SerializeField] GameObject documentRendererUI;
+    [SerializeField] TMP_Text documentRendererText;
 
     private void Awake() 
     {
@@ -17,6 +19,7 @@ public class DocumentRenderer : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log(documentScriptableObject.GetContent());
+        documentRendererUI.SetActive(true);
+        documentRendererText.text = documentScriptableObject.GetContent();
     }
 }
