@@ -7,11 +7,6 @@ public class DocumentRenderer : MonoBehaviour, IInteractable
     [SerializeField] GameObject documentRendererUI;
     [SerializeField] TMP_Text documentRendererText;
 
-    private void Awake() 
-    {
-        // gameObject.tag = "Interactable";
-    }
-
     public string GetInteractText()
     {
         return "Display document";
@@ -21,5 +16,8 @@ public class DocumentRenderer : MonoBehaviour, IInteractable
     {
         documentRendererUI.SetActive(true);
         documentRendererText.text = documentScriptableObject.GetContent();
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
