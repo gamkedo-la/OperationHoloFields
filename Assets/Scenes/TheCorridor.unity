@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -495,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_Name
       value: Tablet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
@@ -3019,6 +3027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -3230,6 +3242,10 @@ PrefabInstance:
     - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_Name
       value: Tablet (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
@@ -3884,6 +3900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -4466,6 +4486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -4935,6 +4959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -5151,6 +5179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet
       objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
@@ -5181,15 +5213,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3433838
+      value: 5.534
       objectReference: {fileID: 0}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4081116
+      value: 1.918
       objectReference: {fileID: 0}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7786293
+      value: 5.554
       objectReference: {fileID: 0}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8818,6 +8850,10 @@ PrefabInstance:
     - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_Name
       value: Tablet (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291377123556916031, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
