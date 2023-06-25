@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Email-Daniel-S-Reward
+  m_EditorClassIdentifier: 
+  content: "June: \r\n\nDaniel Showenbock \r\n\nReason: Found ways automate testing
+    of Operation Holofield eliminating the need for human testers. \r\n\nResult:
+    Annual savings of more than $8 million.\r\n\nReward: 1 day of Paid Time Off,
+    must be used before next award is issued. Daniel must remain on call if issues
+    arise. \n\nCongratulations,\nManagement"
+  title: Employee of the month Award
+  author: Gabor Institute Mgmt
+  receiver: All Employees
+  documentType: 0

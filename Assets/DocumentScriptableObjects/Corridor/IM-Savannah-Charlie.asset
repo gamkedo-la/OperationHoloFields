@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: IM-Savannah-Charlie
+  m_EditorClassIdentifier: 
+  content: "Savannah >> i think im next.\n\r\nCharlie >> why do you think that?\r\n\nSavannah
+    >> they had me do a physical and concluded I was of 'stable mind and body', charlie,
+    i dont want to do it.\n\r\nCharlie >> you could leave? they aren't forcing you
+    to work here.\r\n\nSavannah >> thats just it - they kinda are. like - i can't
+    afford to leave here with daycare and my mortgage. \r\n\nSavannah >> i have to
+    get out of here. \r\n\nCharlie >> dont do anything rash. \r\n\n-- Conversation
+    Terminated by Management --"
+  title: Conversation between Charlie and Savannah
+  author: IM Spyware
+  receiver: Gabor Institute Security
+  documentType: 1

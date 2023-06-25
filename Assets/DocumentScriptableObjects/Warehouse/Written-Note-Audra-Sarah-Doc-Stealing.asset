@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Written-Note-Audra-Sarah-Doc-Stealing
+  m_EditorClassIdentifier: 
+  content: "Audra,\r\n\nYou sly fox! I know you brought your baby here to show him
+    off, he is such a cute little thing! \r\nI also saw that gave you extra access
+    to other departments for show-and-tell.\r\nDon't think I didn't see you slip
+    a couple folders into your stroller. I'll have my eye on you ;) \r\n\nSarah"
+  title: Folder Theft
+  author: Sarah
+  receiver: Audra
+  documentType: 3

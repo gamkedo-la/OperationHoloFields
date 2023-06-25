@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Memo-Raises
+  m_EditorClassIdentifier: 
+  content: "All Employees,\r\n\nCongratulations on hitting the quotas last year.
+    As promised, here are the bonuses as previously discussed. \r\n\n-C-Suite Employees:
+    15% of salary\r\n\n-Middle Management: 10% of salary\r\n\n-Engineers and Manufacturing:
+    5% of salary\r\n\nAs we cleared the goals with such ease, we will be elevating
+    the objectives next year. \r\n\nContinue to make great things. \r\nManagement"
+  title: Salary Raises
+  author: Ganor Institute Mgmt
+  receiver: All Employees
+  documentType: 2

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: IM-Savanah-Claire-Mental-Fatigue
+  m_EditorClassIdentifier: 
+  content: "Savannah >> did you hear another 3 people went to the hospital yesterday?\n
+    \r\nClaire >> omg, y? the same stuff?\r\nSavannah: yeah, they were all for 'mental
+    fatigue' whatever that means\r\n\nClaire >> something sound suspicious in division
+    c. \r\n\nSavannah >> what is that, 13 this month? why has no one said anything?\r\n\nClaire
+    >> you never know who is listening\n\r\n-- Conversation Terminated by Management
+    --"
+  title: Conversation between Savannah and Claire
+  author: IM Spyware
+  receiver: Gabor Institute Security
+  documentType: 1

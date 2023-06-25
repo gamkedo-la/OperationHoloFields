@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: WrittenNote-Carol-Test-Not-Going-Well
+  m_EditorClassIdentifier: 
+  content: 'Dolly,
+
+
+    I heard from Tom in Division B that testing is not going
+    as planned. I''m going to have to start looking for another job. Phil and I can''t
+    wait around for the next round of budget cuts.
+
+
+    I wish you luck, but I''ve
+    got to get out of here.
+
+    Carol'
+  title: Looking For A New Job
+  author: Carol
+  receiver: Dolly
+  documentType: 3

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: IM-Clara-Thomas-Layouts
+  m_EditorClassIdentifier: 
+  content: "Clara >> That was a difficult meeting... Half of the analytics team was
+    just let go. \r\n\nThomas >> I heard it was because they disagreed with how management
+    was running the company. \r\n\nClara >> srsly!? \r\n\nThomas >> Yea, you didn't
+    hear it from me, but Derek was talking to Cindy safety tests that were passed,
+    but actually failed. HR showed up within 20 minutes to his desk and he was gone.
+    \r\n\nClara >> ... working here is getting scary.\r\n\nThomas >> no - no.. its
+    not. We just have to do our jobs and not ask questions. \r\n\nThomas >> ... we
+    better just leave it at that. "
+  title: Conversation between Thomas B. and Clara C.
+  author: IM Spyware
+  receiver: Gabor Institute Security
+  documentType: 1

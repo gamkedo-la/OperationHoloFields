@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: LabReport-PostTest-Delusion
+  m_EditorClassIdentifier: 
+  content: "Patient 97 is exhibiting signs of delusion. They are reaching for items
+    that do not exist even after the reality filter has been re-activated.\r\nHypothesis:
+    Patients with the capability to see both realms next fully leave either realm.
+    \r\n\r\nPatient 110 is exhibiting severe signs of distress. They are screaming
+    and shaking violently in the corner of the room saying - \"Make it stop\". Unresponsive
+    to interuption.\r\nHypothesis: Patient was stretched too far in the second realm
+    and have been unable to re-attach themselves to reality. \r\n\r\nPatient 115
+    and 116 appear to be colluding and working together. This is tremendous progress.
+    They appear to be harnessing the powers to complete the given puzzles. \r\nUnfortunately:
+    During one drop, their reality was incorrect and they plummeted into the pit.
+    We should really look into removing such dangerous items from the test chambers. "
+  title: Post Test Results #127
+  author: Dr Barot
+  receiver: Research Department
+  documentType: 4

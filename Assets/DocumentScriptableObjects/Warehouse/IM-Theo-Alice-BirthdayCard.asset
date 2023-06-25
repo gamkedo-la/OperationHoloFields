@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: IM-Theo-Alice-BirthdayCard
+  m_EditorClassIdentifier: 
+  content: "Alice >> T-man! Did you sign the birthday card I left on your desk?\r\n\nTheo
+    >> No... why would I do that? \r\n\nAlice >> 1) its nice. 2) he's the CEO's son.
+    You have to. \r\nTheo: I don't have to do anything. \r\n\nAlice >> You may not
+    like it, but he has a lot of pull around here, plus - they take attendance based
+    on who signs the cards. \r\n\nTheo >> I don't want to and you can't make me.
+    I come in and do my job, that should be good enough.\n \r\nAlice >> Fine. I'll
+    forge your name like last time. "
+  title: Conversation between Alice and Theo
+  author: IM Spyware
+  receiver: Gabor Institute Security
+  documentType: 1

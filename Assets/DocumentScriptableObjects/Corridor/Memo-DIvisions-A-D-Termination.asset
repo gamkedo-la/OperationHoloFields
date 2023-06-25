@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Memo-DIvisions-A-D-Termination
+  m_EditorClassIdentifier: 
+  content: "All Employees,\r\n\nEffective immediately, all employees in Division
+    A through C of Operation Holofield are terminated. \r\nAccess to badges and technology
+    have been revoked. \r\nDivisions D through F may continue operation, their workload
+    may see slight increases as this restructure takes place. \r\n\nSincerely, \nManagement"
+  title: Contract Termination
+  author: Gabot Institute Mgmt
+  receiver: All Employees
+  documentType: 2

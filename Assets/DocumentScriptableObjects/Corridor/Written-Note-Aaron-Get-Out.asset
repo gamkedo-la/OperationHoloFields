@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
-  m_Name: DocumentsScriptableObject
+  m_Name: Written-Note-Aaron-Get-Out
   m_EditorClassIdentifier: 
-  content: What a great content this is probably the best document ever!!
-  author: 
+  content: 'Aaron - get out. Get out now. Management knows what you did and they
+    are on their way. '
+  title: Warning
+  author: Unknown
+  receiver: Aaron
+  documentType: 3

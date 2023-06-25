@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Memo-Budget-Allocation
+  m_EditorClassIdentifier: 
+  content: "All Employees, \r\n\nLocal media reports have indicated that the company
+    is facing financial hardships. We want to ensure you that that is not true. All
+    of your jobs inside of Operation Holofield will remain. \r\n\nHowever, we will
+    need to make some slight budget re-allocations to ensure everyone in this sector
+    will remain employed: \r\n\n-C-Suite Employees: No reduction of salary\r\n\n-Dividends
+    paid to shareholders: 5% reduction\r\n\n-Middle Management: 20% salary reduction\r\n\n-Engineers:
+    40% salary reduction\r\n\n-Manufacturing Division: 50% salary reduction\r\n\nAlso:
+    Paid time off, insurance, and retirement matching will be suspended until further
+    notice. \r\n\nWe appreciate your continued efforts in this. \r\nManagement"
+  title: Budget Allocation
+  author: Gabor Institute Mgmt
+  receiver: All Employees
+  documentType: 2

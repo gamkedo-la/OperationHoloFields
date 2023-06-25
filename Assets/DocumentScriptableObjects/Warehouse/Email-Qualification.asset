@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce4bf10b6cd9347be3aa8ff9912e23, type: 3}
+  m_Name: Email-Qualification
+  m_EditorClassIdentifier: 
+  content: "Congratulations,\r\n\nYou have been selected to participate in Operation
+    Holofield Division C. As a result - your insurance premiums have tripled and
+    will be taken out of your next paycheck.\n \r\nPlease report to Sector 7 to begin
+    training. You do not need to bring anything, we have it all on file.\n\r\nLet
+    us continue to make great things. \r\nManagement"
+  title: Holofield Qualification
+  author: Gabor Institute Mgmt
+  receiver: Savannah
+  documentType: 0
