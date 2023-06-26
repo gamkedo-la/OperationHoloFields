@@ -4,9 +4,7 @@ using UnityEngine.InputSystem;
 
 public class HoloGoggles : MonoBehaviour
 {
-
     public static event EventHandler<bool> OnHoloGogglesTriggered;
-
     private bool areActive = false;
 
     GameObject[] allHoloObjects;
@@ -46,6 +44,10 @@ public class HoloGoggles : MonoBehaviour
 
     private void SetHoloObjectsActive(bool active)
     {
+        if(active)
+        {
+            // 
+        }
         foreach (GameObject holoObject in allHoloObjects)
         {
             holoObject.SetActive(active);
