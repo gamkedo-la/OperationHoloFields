@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -643,7 +643,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 99e79699e5a8ae549a93a4efc94b0076, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -1083,7 +1083,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 5d3720819df7d3741926431362515e84, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -5989,7 +5989,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -5997,7 +5997,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: eedf5cdf8677e444a8328c3e8ee55835, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -6205,7 +6205,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -6213,7 +6213,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 1e754bcc7f3c8d4489c4be69b10667c6, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -7202,7 +7202,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -7210,7 +7210,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 0eaa80d61844c164db592c73c38f07bc, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -7988,7 +7988,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -9055,7 +9055,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -9063,7 +9063,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 355f8ac5f08014d4cb104554243ea3f7, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -9471,7 +9471,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -9479,7 +9479,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: 09699b8f8d637f443a03ba9c1b670d83, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -12430,6 +12430,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7778142632965764396, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
   m_PrefabInstance: {fileID: 2076660848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1626439521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8019301134356014885, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+  m_PrefabInstance: {fileID: 2076660848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626439520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d55cc012992b14a93faef556041795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1634475765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c8a40dae02e30c348a5a637c6802039d, type: 3}
@@ -15385,7 +15396,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererUI
       value: 
-      objectReference: {fileID: 1626439520}
+      objectReference: {fileID: 1626439521}
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentRendererText
       value: 
@@ -15393,7 +15404,7 @@ PrefabInstance:
     - target: {fileID: 7096655891249711290, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: documentScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 5e60599063145e748af6efa69d0d43ab, type: 2}
+      objectReference: {fileID: 11400000, guid: de5e427d5df7d0445b48d0e0a6e655d9, type: 2}
     - target: {fileID: 8146922782317653199, guid: 6c46a8981f2ccc1478abebdab3962222, type: 3}
       propertyPath: m_RootOrder
       value: 27
