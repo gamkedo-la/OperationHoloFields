@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class CustomCameraBehaviors : MonoBehaviour
 {
-    // respond to holo goggles toggled
+    private void Awake()
+    {
+        HoloGoggles.OnHoloGogglesTriggered += ToggleHoloGoggles;
+    }
+    private void ToggleHoloGoggles(object sender, bool areActive)
+    {
+        // Add or remove holo-goggles camera effects
+    }
 }

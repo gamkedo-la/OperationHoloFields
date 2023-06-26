@@ -44,10 +44,6 @@ public class HoloGoggles : MonoBehaviour
 
     private void SetHoloObjectsActive(bool active)
     {
-        if(active)
-        {
-            // 
-        }
         foreach (GameObject holoObject in allHoloObjects)
         {
             holoObject.SetActive(active);
