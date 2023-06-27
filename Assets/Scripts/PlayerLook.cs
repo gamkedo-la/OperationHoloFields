@@ -68,10 +68,10 @@ public class PlayerLook : MonoBehaviour
 
                     if (!currentInteractableObjectScript.GetIsHighlighted())
                     {
-                        currentInteractableObjectScript.originalMaterial = currentInteractableObjectMeshRenderer.material;
+                        // currentInteractableObjectScript.originalMaterial = currentInteractableObjectMeshRenderer.materials[currentInteractableObjectScript.materialIdxToChange] ;
                         currentInteractableObjectScript.SetIsHighlighted(true);
                     }
-                    currentInteractableObjectMeshRenderer.material = currentInteractableObjectScript.interactableHighlightMaterial;
+                    currentInteractableObjectScript.ChangeMaterialToHighlighted();
                 }
                 else
                 {
@@ -80,8 +80,7 @@ public class PlayerLook : MonoBehaviour
                     {
                         otherInteractableObjectScript.SetIsHighlighted(false);
                     }
-                    otherInteractableObjectScript.GetChildWithMesh().GetComponent<MeshRenderer>().material =
-                        arrayOfInteractableObjects[i].GetComponent<InteractableObjectScript>().originalMaterial;
+                    otherInteractableObjectScript.ChangeMaterialToOriginal();
                 }
             } 
         }
@@ -94,8 +93,7 @@ public class PlayerLook : MonoBehaviour
                 {
                     interactableObjectScript.SetIsHighlighted(false);
                 }
-                interactableObjectScript.GetChildWithMesh().GetComponent<MeshRenderer>().material =
-                        interactableObjectScript.originalMaterial;
+                interactableObjectScript.ChangeMaterialToOriginal();
 
                 playerGrabScript.shouldntDropStuff = false;
             }

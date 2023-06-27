@@ -77,6 +77,7 @@ MonoBehaviour:
   originalMaterial: {fileID: -6197532795890271822, guid: 089d5ee89bedbc7428725fe1a57a0cea, type: 3}
   interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
   couldBeOrCurrentlyInteractedByPlayer: 0
+  materialIdxToChange: 1
 --- !u!1001 &4659772674840138659
 PrefabInstance:
   m_ObjectHideFlags: 0
