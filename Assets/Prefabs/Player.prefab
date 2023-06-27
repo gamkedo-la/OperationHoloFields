@@ -3298,6 +3298,7 @@ Transform:
   - {fileID: 2565304145229721762}
   - {fileID: 2278352457598137667}
   - {fileID: 4396063283390362388}
+  - {fileID: 1790913120258366082}
   m_Father: {fileID: 4630484399482755887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3384,7 +3385,6 @@ Transform:
   - {fileID: 3566835933497111892}
   - {fileID: 8147543910274014859}
   - {fileID: 1246687217208527201}
-  - {fileID: 1790913120258366082}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5328,7 +5328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1790913120258366082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5342,8 +5342,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5886188380889511724}
-  m_Father: {fileID: 4630484399482755887}
-  m_RootOrder: 6
+  m_Father: {fileID: 4630484399343290675}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5406,6 +5406,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a9deb94f3eb9f409cca860c36b8e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionTime: 1
+  transitionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 3.2612917
+      outSlope: 3.2612917
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.024193548
+    - serializedVersion: 3
+      time: 0.23940718
+      value: 0.75928074
+      inSlope: 0.48295912
+      outSlope: 0.48295912
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.060911633
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.048159607
+      outSlope: 0.048159607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07240436
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  goggles: {fileID: 3071258135247459548}
 --- !u!1 &7701433654182329676
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,26 +1,72 @@
+using System.Collections;
 using UnityEngine;
 
 public class GoggleOverlay : MonoBehaviour
 {
-    private RectTransform gogglesRectTransform;
+    [Range(0.2f, 1f)] public float transitionTime;
+    public AnimationCurve transitionCurve;
+    public GameObject goggles;
+    private RectTransform gogglesRect;
     private bool currentState = false;
+    private int maxGoggleHeight = 1080;
+    private float timePassed;
     private void Awake()
     {
-        gogglesRectTransform = GetComponentInChildren<RectTransform>();
+        gogglesRect = goggles.GetComponentInChildren<RectTransform>();
         HoloGoggles.OnHoloGogglesTriggered += ToggleHoloGoggles;
+        StartCoroutine(RemoveGoggles());
     }
-
+    private IEnumerator AddGoggles()
+    {
+        goggles.SetActive(true);
+        while(timePassed / transitionTime <= 1)
+        {
+            gogglesRect.anchoredPosition = new Vector2(
+                0,
+                maxGoggleHeight - (transitionCurve.Evaluate(timePassed / transitionTime) * maxGoggleHeight)
+            );
+            gogglesRect.localPosition = new Vector3(
+                gogglesRect.localPosition.x,
+                maxGoggleHeight - transitionCurve.Evaluate((timePassed / transitionTime)) * maxGoggleHeight,
+                gogglesRect.localPosition.z
+            );
+            timePassed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        gogglesRect.anchoredPosition = Vector2.zero;
+        gogglesRect.localPosition = Vector3.zero;
+    }
+    private IEnumerator RemoveGoggles()
+    {
+        while(timePassed / transitionTime <= 1)
+        {
+            gogglesRect.anchoredPosition = new Vector2(
+                0,
+                transitionCurve.Evaluate(timePassed / transitionTime)*maxGoggleHeight
+            );
+            gogglesRect.localPosition = new Vector3(
+                gogglesRect.localPosition.x,
+                transitionCurve.Evaluate(timePassed / transitionTime)*maxGoggleHeight,
+                gogglesRect.localPosition.z
+            );
+            timePassed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        goggles.SetActive(false);
+    }
     private void ToggleHoloGoggles(object sender, bool active)
     {
-        if(active && !currentState)
+        if(!currentState && active)
         {
-
             currentState = true;
+            timePassed = 0;
+            StartCoroutine(AddGoggles());
         }
-        else if(!active && currentState)
+        if(!active && currentState)
         {
-            gogglesRectTransform.localScale = new Vector3(0, 0, 0);
             currentState = false;
+            timePassed = 0;
+            StartCoroutine(RemoveGoggles());
         }
     }
 }
