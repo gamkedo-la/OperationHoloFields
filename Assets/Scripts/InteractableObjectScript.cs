@@ -8,6 +8,7 @@ public class InteractableObjectScript : MonoBehaviour
     private GameObject childObjectWithActualMeshesAndMaterials;
     private GameObject myGameObject;
     private bool isHighLighted = false;
+    public int materialIdxToChange = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -31,4 +32,17 @@ public class InteractableObjectScript : MonoBehaviour
         return childObjectWithActualMeshesAndMaterials;
     }
     
+    public void ChangeMaterialToHighlighted()
+    {
+        Material[] allMaterials = childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().materials;
+        allMaterials[materialIdxToChange] = interactableHighlightMaterial;
+        childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().materials = allMaterials;
+    }
+
+    public void ChangeMaterialToOriginal()
+    {
+        Material[] allMaterials = childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().materials;
+        allMaterials[materialIdxToChange] = originalMaterial;
+        childObjectWithActualMeshesAndMaterials.GetComponent<MeshRenderer>().materials = allMaterials;
+    }
 }
