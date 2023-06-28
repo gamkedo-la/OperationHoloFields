@@ -15,6 +15,7 @@ public class HoloGoggles : MonoBehaviour
     private AudioSource scanlineAudioEffectsPlayer;
     [SerializeField] AudioClip scanlineOnSoundEffect;
     [SerializeField] AudioClip scanlineOffSoundEffect;
+    [SerializeField] float scanlineSoundVolume = 0.02f; // much quieter than other sounds the player might trigger
 
     private void Start() {
         allHoloObjects = GameObject.FindGameObjectsWithTag("Holo");
@@ -29,6 +30,7 @@ public class HoloGoggles : MonoBehaviour
         {
             SetHoloObjectsActive(true);
             scanlineAudioEffectsPlayer.clip = scanlineOnSoundEffect;
+            scanlineAudioEffectsPlayer.volume = scanlineSoundVolume;
             scanlineAudioEffectsPlayer.Play();
             scanlineImageAnimatorComponent.SetTrigger("OnToggleOn");
         }
@@ -36,6 +38,7 @@ public class HoloGoggles : MonoBehaviour
         {
             SetHoloObjectsActive(false);
             scanlineAudioEffectsPlayer.clip = scanlineOffSoundEffect;
+            scanlineAudioEffectsPlayer.volume = scanlineSoundVolume;            
             scanlineAudioEffectsPlayer.Play();
             scanlineImageAnimatorComponent.SetTrigger("OnToggleOff");
         }

@@ -10263,6 +10263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InAllScenes
       objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254003, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: scanlineSoundVolume
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10271,6 +10275,10 @@ PrefabInstance:
       propertyPath: currentLevelStartingSpawnpoint
       value: 
       objectReference: {fileID: 1615287990}
+    - target: {fileID: 5832203529954263749, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
 --- !u!1001 &5552904246794561749
