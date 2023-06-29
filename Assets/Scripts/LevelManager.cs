@@ -1,27 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour, IInteractable
 {
     [SerializeField] float fadeSpeed = 2f;
-    [SerializeField] Image fadeImage;
+    [SerializeField] Fader fader;
 
-    private bool isFading = false;
-
-    private void Update() 
+    private void Awake() 
     {
-        FadeOut();
-    }
-
-    private void FadeOut()
-    {
-        if(!isFading) return;
-
-        Color tempColor = fadeImage.color;
-        tempColor.a += 1f / fadeSpeed * Time.deltaTime;
-        fadeImage.color = tempColor;
+        fader = FindObjectOfType<Fader>();
     }
 
     public void LoadNextLevel()
@@ -41,7 +29,8 @@ public class LevelManager : MonoBehaviour, IInteractable
 
     private IEnumerator LoadLevelAfterTime()
     {
-        isFading = true;
+        fader.SetFadingSpeed(fadeSpeed);
+        fader.ActivateFadeOut();
         yield return new WaitForSeconds(fadeSpeed + 1f);
         LoadNextLevel();
     }

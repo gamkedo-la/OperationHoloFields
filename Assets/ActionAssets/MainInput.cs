@@ -347,7 +347,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2ef09c7c-8eb6-4a39-97f2-0f9874168c54"",
+                    ""id"": ""a662e109-ceac-462e-9d9e-1545f61a7b46"",
                     ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -448,6 +448,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""79a113cf-fdbb-4a13-a2a4-8787b8e97f32"",
                     ""expectedControlType"": ""Quaternion"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""0dfdacef-a02a-44c0-a4fe-05bb45e8a253"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -871,6 +880,56 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c980ea26-986c-4be4-82c7-8105f0ba725d"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""DeadPlayer"",
+            ""id"": ""13a11c3f-d35e-4a39-b203-657777f00697"",
+            ""actions"": [
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e9105da-a142-4de2-851f-54da6a5c0c55"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""8c7cb62e-df0a-48fc-acc9-3441edf3e9cf"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51caf0e3-a9c8-4dd5-a69a-82c0c15f7894"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -959,6 +1018,10 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        m_UI_TogglePause = m_UI.FindAction("TogglePause", throwIfNotFound: true);
+        // DeadPlayer
+        m_DeadPlayer = asset.FindActionMap("DeadPlayer", throwIfNotFound: true);
+        m_DeadPlayer_TogglePause = m_DeadPlayer.FindAction("TogglePause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1124,6 +1187,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
+    private readonly InputAction m_UI_TogglePause;
     public struct UIActions
     {
         private @MainInput m_Wrapper;
@@ -1138,6 +1202,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
+        public InputAction @TogglePause => m_Wrapper.m_UI_TogglePause;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1177,6 +1242,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+            @TogglePause.started += instance.OnTogglePause;
+            @TogglePause.performed += instance.OnTogglePause;
+            @TogglePause.canceled += instance.OnTogglePause;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1211,6 +1279,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled -= instance.OnTrackedDeviceOrientation;
+            @TogglePause.started -= instance.OnTogglePause;
+            @TogglePause.performed -= instance.OnTogglePause;
+            @TogglePause.canceled -= instance.OnTogglePause;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1228,6 +1299,52 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // DeadPlayer
+    private readonly InputActionMap m_DeadPlayer;
+    private List<IDeadPlayerActions> m_DeadPlayerActionsCallbackInterfaces = new List<IDeadPlayerActions>();
+    private readonly InputAction m_DeadPlayer_TogglePause;
+    public struct DeadPlayerActions
+    {
+        private @MainInput m_Wrapper;
+        public DeadPlayerActions(@MainInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TogglePause => m_Wrapper.m_DeadPlayer_TogglePause;
+        public InputActionMap Get() { return m_Wrapper.m_DeadPlayer; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DeadPlayerActions set) { return set.Get(); }
+        public void AddCallbacks(IDeadPlayerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DeadPlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DeadPlayerActionsCallbackInterfaces.Add(instance);
+            @TogglePause.started += instance.OnTogglePause;
+            @TogglePause.performed += instance.OnTogglePause;
+            @TogglePause.canceled += instance.OnTogglePause;
+        }
+
+        private void UnregisterCallbacks(IDeadPlayerActions instance)
+        {
+            @TogglePause.started -= instance.OnTogglePause;
+            @TogglePause.performed -= instance.OnTogglePause;
+            @TogglePause.canceled -= instance.OnTogglePause;
+        }
+
+        public void RemoveCallbacks(IDeadPlayerActions instance)
+        {
+            if (m_Wrapper.m_DeadPlayerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IDeadPlayerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DeadPlayerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DeadPlayerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public DeadPlayerActions @DeadPlayer => new DeadPlayerActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1295,5 +1412,10 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+        void OnTogglePause(InputAction.CallbackContext context);
+    }
+    public interface IDeadPlayerActions
+    {
+        void OnTogglePause(InputAction.CallbackContext context);
     }
 }
