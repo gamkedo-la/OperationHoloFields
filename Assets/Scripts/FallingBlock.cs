@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,13 @@ public class FallingBlock : MonoBehaviour
     [SerializeField] GameObject particleGO;
     Rigidbody rb;
 
+    MeshRenderer visual;
+
     bool falling = false;
     float fallTime = 0;
     float fallTimeBeforeDeletion = 5f;
+
+    Vector3 startPos;
 
     public bool IsFallingBlock { get => fallingBlock; }
 
@@ -19,9 +24,16 @@ public class FallingBlock : MonoBehaviour
     void Start()
     {
         HoloGoggles.OnHoloGogglesTriggered += HoloGoggles_OnHoloGogglesTriggered;
+        RespawnScript.OnRespawn += RespawnScript_OnRespawn;
         rb = GetComponent<Rigidbody>();
+        startPos = transform.position;
+        visual = GetComponentInChildren<MeshRenderer>();
     }
 
+    private void RespawnScript_OnRespawn(object sender, EventArgs e)
+    {
+        ReenableBlock();
+    }
 
     private void HoloGoggles_OnHoloGogglesTriggered(object sender, bool e)
     {
@@ -48,8 +60,25 @@ public class FallingBlock : MonoBehaviour
 
         if (fallTime > fallTimeBeforeDeletion)
         {
-            Destroy(gameObject);
+            DisableBlock();
         }
+    }
+
+    private void DisableBlock()
+    {
+        rb.isKinematic = true;
+        visual.enabled = false;
+        falling = false;
+        fallTime = 0;
+    }
+
+    private void ReenableBlock()
+    {
+        rb.isKinematic = true;
+        transform.position = startPos;
+        falling = false;
+        fallTime = 0;
+        visual.enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class RespawnScript : MonoBehaviour
 {
+
+    public static event EventHandler OnRespawn;
 
     [SerializeField] public CharacterController player;
     [SerializeField] public GameObject respawnPoint;
@@ -21,6 +24,7 @@ public class RespawnScript : MonoBehaviour
             player.enabled = false;
             player.transform.position = respawnPoint.transform.position;
             player.enabled = true;
+            OnRespawn?.Invoke(this, EventArgs.Empty);
         }
     }
 
