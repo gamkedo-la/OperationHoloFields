@@ -81,4 +81,11 @@ public class Fader : MonoBehaviour
     {
         fadeSpeed = newSpeed;
     }
+
+    public void FadeOutInstant()
+    {
+        Color tempColor = image.color;
+        tempColor.a = 1f;
+        image.color = tempColor;
+    }
 }
