@@ -23,4 +23,9 @@ public class RespawnScript : MonoBehaviour
             player.enabled = true;
         }
     }
+
+    public void UpdateRespawnPoint(GameObject newRespawnPoint)
+    {
+        respawnPoint = newRespawnPoint;
+    }
 }
