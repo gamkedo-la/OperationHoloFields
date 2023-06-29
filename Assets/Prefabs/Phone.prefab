@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e8020f559c44e43bf654b7edba53c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalMaterial: {fileID: 2200489798665985146, guid: c72ee7b57b89ba643b3e3ba2b87e43b0, type: 3}
+  originalMaterial: {fileID: 2100000, guid: f3892a3802ef5d545a465c44076f909d, type: 2}
   interactableHighlightMaterial: {fileID: 2100000, guid: b5fd8469e80e9724a999672b9f01f3ce, type: 2}
   couldBeOrCurrentlyInteractedByPlayer: 0
   materialIdxToChange: 1
@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -125.834
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c72ee7b57b89ba643b3e3ba2b87e43b0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3892a3802ef5d545a465c44076f909d, type: 2}
     - target: {fileID: 919132149155446097, guid: c72ee7b57b89ba643b3e3ba2b87e43b0, type: 3}
       propertyPath: m_Name
       value: phone
