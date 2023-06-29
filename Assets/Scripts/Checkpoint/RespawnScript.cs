@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
 public class RespawnScript : MonoBehaviour
 {
+
+    public static event EventHandler OnRespawn;
+
+    [SerializeField] public CharacterController player;
     [SerializeField] public GameObject respawnPoint;
-    [SerializeField] CharacterController player;
     [SerializeField] float deathFadeTime = 1f;
     private Fader fader;
 
@@ -24,6 +28,7 @@ public class RespawnScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(KillPlayer());
+            OnRespawn?.Invoke(this, EventArgs.Empty);
         }
     }
 
