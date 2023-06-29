@@ -14,7 +14,14 @@ public class GoggleOverlay : MonoBehaviour
     {
         gogglesRect = goggles.GetComponentInChildren<RectTransform>();
         HoloGoggles.OnHoloGogglesTriggered += ToggleHoloGoggles;
-        StartCoroutine(RemoveGoggles());
+        // StartCoroutine(RemoveGoggles());
+
+        gogglesRect.localPosition = new Vector3(
+            gogglesRect.localPosition.x,
+            maxGoggleHeight,
+            gogglesRect.localPosition.z
+        );
+        goggles.SetActive(false);
     }
     private IEnumerator AddGoggles()
     {
