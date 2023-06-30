@@ -18,4 +18,18 @@ public class DocumentRenderer : MonoBehaviour, IInteractable
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            if (documentRendererUI.gameObject.activeSelf == true)
+            {
+                documentRendererUI.gameObject.SetActive(false);
+                Time.timeScale = 1;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+    }
 } 
