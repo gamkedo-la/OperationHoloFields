@@ -30,6 +30,11 @@ public class FallingBlock : MonoBehaviour
         visual = GetComponentInChildren<MeshRenderer>();
     }
 
+    private void OnDestroy() {
+        HoloGoggles.OnHoloGogglesTriggered -= HoloGoggles_OnHoloGogglesTriggered;
+        RespawnScript.OnRespawn -= RespawnScript_OnRespawn;
+    }
+
     private void RespawnScript_OnRespawn(object sender, EventArgs e)
     {
         ReenableBlock();

@@ -23,6 +23,10 @@ public class Forcefield : MonoBehaviour
         
     }
 
+    private void OnDestroy() {
+        HoloGoggles.OnHoloGogglesTriggered -= HoloGoggles_OnHoloGogglesTriggered;
+    }
+
     private void HoloGoggles_OnHoloGogglesTriggered(object sender, bool e)
     {
         ToggleForcefield(e);
@@ -30,6 +34,9 @@ public class Forcefield : MonoBehaviour
 
     private void ToggleForcefield(bool holoState)
     {
+        if(renderer == null){
+            return;
+        }
         if (holoState == holoEnabled)
         {
             renderer.enabled = true;

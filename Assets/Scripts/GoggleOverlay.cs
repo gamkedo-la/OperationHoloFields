@@ -23,6 +23,10 @@ public class GoggleOverlay : MonoBehaviour
         );
         goggles.SetActive(false);
     }
+
+    private void OnDestroy() {
+        HoloGoggles.OnHoloGogglesTriggered -= ToggleHoloGoggles;
+    }
     private IEnumerator AddGoggles()
     {
         goggles.SetActive(true);
