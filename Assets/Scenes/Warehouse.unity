@@ -33067,6 +33067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 945694130, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1022288565662082086, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -33135,6 +33139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InAllScenes
       objectReference: {fileID: 0}
+    - target: {fileID: 2571092815489254003, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
+      propertyPath: scanlineSoundVolume
+      value: 0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 2571092815489254008, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -33175,7 +33183,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5224504912868320784, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b0f171d698057e4f8d4162e368fcae8, type: 3}
 --- !u!95 &595910338 stripped
 Animator:
