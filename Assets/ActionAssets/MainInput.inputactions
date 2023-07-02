@@ -910,6 +910,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "CutScene",
+            "id": "7be74061-8149-4178-a5a9-aa1e27b34be9",
+            "actions": [
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "21b8f51c-81b5-45a1-8cf7-87aea935d858",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6a09a7be-722b-4939-8a2f-8c38e1914f0f",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

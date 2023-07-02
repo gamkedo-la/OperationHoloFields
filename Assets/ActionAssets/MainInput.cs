@@ -932,6 +932,34 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""CutScene"",
+            ""id"": ""7be74061-8149-4178-a5a9-aa1e27b34be9"",
+            ""actions"": [
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""21b8f51c-81b5-45a1-8cf7-87aea935d858"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6a09a7be-722b-4939-8a2f-8c38e1914f0f"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1022,6 +1050,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         // DeadPlayer
         m_DeadPlayer = asset.FindActionMap("DeadPlayer", throwIfNotFound: true);
         m_DeadPlayer_TogglePause = m_DeadPlayer.FindAction("TogglePause", throwIfNotFound: true);
+        // CutScene
+        m_CutScene = asset.FindActionMap("CutScene", throwIfNotFound: true);
+        m_CutScene_Quit = m_CutScene.FindAction("Quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1345,6 +1376,52 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         }
     }
     public DeadPlayerActions @DeadPlayer => new DeadPlayerActions(this);
+
+    // CutScene
+    private readonly InputActionMap m_CutScene;
+    private List<ICutSceneActions> m_CutSceneActionsCallbackInterfaces = new List<ICutSceneActions>();
+    private readonly InputAction m_CutScene_Quit;
+    public struct CutSceneActions
+    {
+        private @MainInput m_Wrapper;
+        public CutSceneActions(@MainInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Quit => m_Wrapper.m_CutScene_Quit;
+        public InputActionMap Get() { return m_Wrapper.m_CutScene; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CutSceneActions set) { return set.Get(); }
+        public void AddCallbacks(ICutSceneActions instance)
+        {
+            if (instance == null || m_Wrapper.m_CutSceneActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_CutSceneActionsCallbackInterfaces.Add(instance);
+            @Quit.started += instance.OnQuit;
+            @Quit.performed += instance.OnQuit;
+            @Quit.canceled += instance.OnQuit;
+        }
+
+        private void UnregisterCallbacks(ICutSceneActions instance)
+        {
+            @Quit.started -= instance.OnQuit;
+            @Quit.performed -= instance.OnQuit;
+            @Quit.canceled -= instance.OnQuit;
+        }
+
+        public void RemoveCallbacks(ICutSceneActions instance)
+        {
+            if (m_Wrapper.m_CutSceneActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ICutSceneActions instance)
+        {
+            foreach (var item in m_Wrapper.m_CutSceneActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_CutSceneActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public CutSceneActions @CutScene => new CutSceneActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1417,5 +1494,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     public interface IDeadPlayerActions
     {
         void OnTogglePause(InputAction.CallbackContext context);
+    }
+    public interface ICutSceneActions
+    {
+        void OnQuit(InputAction.CallbackContext context);
     }
 }
