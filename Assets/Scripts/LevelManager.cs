@@ -34,4 +34,9 @@ public class LevelManager : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(fadeSpeed + 1f);
         LoadNextLevel();
     }
+
+    public void LoadLevelByName(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }
