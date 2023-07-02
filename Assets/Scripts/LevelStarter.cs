@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class LevelStarter : MonoBehaviour
 {
     [SerializeField] float startFadeInSpeed = 3f; 
+    [SerializeField] bool cutSceneWithNoPlayer = false;
     private Fader fader;
 
     private void Awake()
@@ -25,6 +26,8 @@ public class LevelStarter : MonoBehaviour
 
     private void DisablePlayerInput()
     {
+        if (cutSceneWithNoPlayer) return;
+
         InputActionAsset actions = FindObjectOfType<PlayerInput>().actions;
         actions.FindActionMap("Player").Disable();
         actions.FindActionMap("DeadPlayer").Enable();
@@ -32,6 +35,8 @@ public class LevelStarter : MonoBehaviour
 
     private void InablePlayerInput()
     {
+        if (cutSceneWithNoPlayer) return;
+
         InputActionAsset actions = FindObjectOfType<PlayerInput>().actions;
         actions.FindActionMap("Player").Enable();
         actions.FindActionMap("DeadPlayer").Disable();
@@ -46,6 +51,8 @@ public class LevelStarter : MonoBehaviour
 
     private void HideCursor()
     {
+        if (cutSceneWithNoPlayer) return;
+     
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
