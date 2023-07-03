@@ -24,4 +24,11 @@ public class GoToNextLevelPrompt : MonoBehaviour
         Time.timeScale = 1;
         GetComponent<LevelManager>().Interact();
     }
+
+    public void ProceedToLevelName(string name)
+    {
+        promptCanvas.SetActive(false);
+        Time.timeScale = 1;
+        StartCoroutine(GetComponent<LevelManager>().LoadLevelByNameAfterTime(name));
+    }
 }

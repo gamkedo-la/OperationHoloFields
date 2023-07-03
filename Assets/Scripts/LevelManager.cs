@@ -35,6 +35,14 @@ public class LevelManager : MonoBehaviour, IInteractable
         LoadNextLevel();
     }
 
+    public IEnumerator LoadLevelByNameAfterTime(string name)
+    {
+        fader.SetFadingSpeed(fadeSpeed);
+        fader.ActivateFadeOut();
+        yield return new WaitForSeconds(fadeSpeed + 1f);
+        LoadLevelByName(name);
+    }
+
     public void LoadLevelByName(string name)
     {
         SceneManager.LoadScene(name);
