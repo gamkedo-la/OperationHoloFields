@@ -237,7 +237,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2055476490723970531, guid: 5dc9a431150f64245a2c6322840ad319, type: 3}
     - {fileID: 2055476491151159691, guid: 5dc9a431150f64245a2c6322840ad319, type: 3}
-    - {fileID: 2055476490952938265, guid: 5dc9a431150f64245a2c6322840ad319, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5dc9a431150f64245a2c6322840ad319, type: 3}
 --- !u!1 &1347966 stripped
 GameObject:
@@ -363,6 +362,30 @@ PrefabInstance:
     - target: {fileID: 2498171298078575019, guid: 71a329da28027294b9188061725964b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498171298581733602, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347967}
+    - target: {fileID: 2498171298581733602, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498171298581733602, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HellRespawn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498171298773675483, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347967}
+    - target: {fileID: 2498171298773675483, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498171298773675483, guid: 71a329da28027294b9188061725964b3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HellRespawn, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71a329da28027294b9188061725964b3, type: 3}
@@ -2596,7 +2619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &812839722
 MonoBehaviour:
   m_ObjectHideFlags: 0
