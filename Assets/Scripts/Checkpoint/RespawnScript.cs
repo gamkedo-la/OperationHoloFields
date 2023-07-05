@@ -34,7 +34,6 @@ public class RespawnScript : MonoBehaviour
 
     private void TeleportPlayer()
     {
-        print("Teleport");
         player.enabled = false;
         player.transform.position = respawnPoint.transform.position;
         player.enabled = true;

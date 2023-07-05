@@ -39,7 +39,6 @@ public class Fader : MonoBehaviour
     private void FadeOut()
     {
         if(!isFadingOut) return;
-        print("fade");
 
         Color tempColor = image.color;
 
@@ -55,7 +54,6 @@ public class Fader : MonoBehaviour
 
     public void ActivateFadeOut()
     {
-        print("Xander");
         isFadingOut = true;
     }
 

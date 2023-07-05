@@ -8,14 +8,12 @@ public class PauseMenuScript : MonoBehaviour
 
     public void DisplayPauseButtons()
     {
-        print("Display pause buttons");
         commandsPannel.SetActive(false);
         pauseButtonsPannel.SetActive(true);
     }
 
     public void DisplayCommandsPannel()
     {
-        print("Display Command Pannels");
         commandsPannel.SetActive(true);
         pauseButtonsPannel.SetActive(false);
     }
