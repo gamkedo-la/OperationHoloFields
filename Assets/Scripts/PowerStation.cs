@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class PowerStation : MonoBehaviour
 {
-    [SerializeField] GameObject myButton;
-    private SinglePressButton singlePressButtonScript;
+    [SerializeField] SinglePressButton[] myButtons;
     private bool hasBeenActivated = false;
 
-    private void Start()
-    {
-        singlePressButtonScript = myButton.GetComponent<SinglePressButton>();
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (hasBeenActivated) return;
@@ -20,9 +15,14 @@ public class PowerStation : MonoBehaviour
             {
                 FindObjectOfType<PlayerGrab>().Drop();
             }
-            singlePressButtonScript.Activate();
-            other.gameObject.tag = "Untagged";
-            other.gameObject.GetComponent<Grabbable>().SetGrabEnabled(false);
+
+            foreach(SinglePressButton myButton in myButtons)
+            {
+                myButton.Activate();
+                other.gameObject.tag = "Untagged";
+                other.gameObject.GetComponent<Grabbable>().SetGrabEnabled(false);
+            }
+            
             hasBeenActivated = true;
         }
     }
